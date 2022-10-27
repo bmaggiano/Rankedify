@@ -1,6 +1,14 @@
 #homepageBody {
     background-image: url(../assets/images/alexey-savchenko-k4Akpt5-Sfk-unsplash.jpg);
-    height: 937px;
+    height: 1200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#loginBody {
+    background-image: url(../assets/images/alexey-savchenko-k4Akpt5-Sfk-unsplash.jpg);
+    height: 1200px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,6 +69,11 @@ nav {
 #navBTN {
     margin: 10px 10px;
     color: white;
+}
+
+#email-login {
+    color: aliceblue;
+
 }
 
 
