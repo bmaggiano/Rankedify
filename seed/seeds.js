@@ -18,7 +18,7 @@ const arrayOfResponses = await Promise.all(
     urls.map((url) =>
         fetch(url)
             .then((res) => res.json())
-             .then((data) => (data.results))
+            .then((data) => (data.results))
     )
 );
 
@@ -28,9 +28,11 @@ blankArr.push(...arrayOfResponses[0], ...arrayOfResponses[1], ...arrayOfResponse
 
 const gamesArr = []
 
-for (let i=0; i<blankArr.length; i++) {
-    const name = {name: `${blankArr[i].name}`,
-                 image: `${blankArr[i].background_image}`};
+for (let i = 0; i < blankArr.length; i++) {
+    const name = {
+        name: `${blankArr[i].name}`,
+        image: `${blankArr[i].background_image}`
+    };
     gamesArr.push(name);
 }
 
