@@ -4,7 +4,7 @@ const { Comments } = require('../../models')
 //Creates new comment
 // router.post('/comments', async (req, res) => {
 //     try {
-//         const comment =
+//         const comment = 
 //     } catch {
 
 //     }
