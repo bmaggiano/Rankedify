@@ -1,0 +1,60 @@
+#titleHeader {
+    justify-content: center;
+    background-image: url(../assets/images/alexey-savchenko-k4Akpt5-Sfk-unsplash.jpg);
+    height: 937px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+}
+
+#titleHeaderText {
+    padding-top: 30px;
+    color: white;
+    font-size: 56px;
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+#intro {
+    opacity: 0;
+    padding-top: 120px;
+    color: white;
+    font-size: 30px;
+    animation: fadeInAnimation 2s ease 1s 1 forwards;
+
+}
+
+#intro2 {
+    opacity: 0;
+    padding-top: 120px;
+    color: white;
+    font-size: 30px;
+    animation: fadeInAnimation 2s ease 2s 1 forwards;
+
+}
+
+#spanLogIn {
+    color: red;
+    text-decoration: none;
+}
+
+#nav {
+    color: white;
+}
+
+
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 1;
+    }
+}
