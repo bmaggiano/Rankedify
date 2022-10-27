@@ -1,19 +1,20 @@
 // const Comments = require("./Comments")
+const User = require("./User")
 const Games = require("./Games")
-// const User = require("./User")
-// const Usergames = require("./Usergames")
+const Usergames = require("./Usergames")
 
 
 // Categories have many Products
-// User.hasMany(Usergames, {
-//   foreignKey: 'user_id',
-//   onDelete: "CASCADE"
-// });
+User.belongsToMany(Games, {
+  foreignKey: 'user_id',
+  through: {model: Usergames,
+    unique: false},});
 
-// Usergames.belongsTo(User, {
-//   foreignKey: 'user_id',
-//   onDelete: "CASCADE"
-// });
+Games.belongsToMany(User, {
+  through: {model: Usergames,
+  unique: false},
+  foreignKey: 'user_id',
+});
 
 // Tags belongToMany Products (through ProductTag)
 // User.hasMany(Games, {
@@ -30,6 +31,6 @@ const Games = require("./Games")
 module.exports = {
   // Comments,  
   Games,
-  // User,
-  // Usergames
+  User,
+  Usergames
   };
