@@ -1,19 +1,20 @@
 <body id="homepageBody">
+    <nav class="d-flex p-2">
+        {{#if loggedIn}}
+        <button type="button" id="navBTN" class="btn btn-outline-light">Log out</button>
+        {{else}}
+        <button type="button" id="navBTN" class="btn btn-outline-light">Log in</button>
+        {{/if}}
+        <a type="button" id="navBTN" class="btn btn-outline-light">My list</a>
+        <a type="button" id="navBTN" class="btn btn-outline-light">About us</a>
+    </nav>
     <section id="titleHeader" class="">
         <h1 id="titleHeaderText" class="">Rankedify</h1>
         <div id="nav" class="">
-            <nav>
-                {{#if loggedIn}}
-                <button>Log out</button>
-                {{else}}
-                <button '/login'>Log in</button>
-                {{/if}}
-                <button>My list</button>
-                <button>About us</button>
-            </nav>
         </div>
         <div id="intro">Choose your favorite games and share them with the world</div>
-        <div id="intro2"><span id="homeLogIn"><a id='spanLogIn' href="#">Log in </a></span>and start sharing
-        </div>
+        <div id="intro2"><span id="homeLogIn"><a id='spanLogIn' href="/login">Log in </a></span>and start sharing.</div>
+        <div id="intro3">Dont have an account? <span id="homeLogIn"><a id="spanLogIn" href="/signup">Sign up</a></span>
+            for free.</div>
     </section>
 </body>
