@@ -1,10 +1,13 @@
-#titleHeader {
-    justify-content: center;
+#homepageBody {
     background-image: url(../assets/images/alexey-savchenko-k4Akpt5-Sfk-unsplash.jpg);
     height: 937px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#titleHeader {
+    justify-content: center;
     text-align: center;
 
 }
