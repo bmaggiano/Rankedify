@@ -3,14 +3,14 @@ const Games = require("./Games")
 const User = require("./User")
 const Usergames = require("./Usergames")
 
-User.belongsTo(Category, {
-  foreignKey: 'category_id',
+Usergames.belongsTo(User, {
+  foreignKey: 'user_id',
   onDelete: "CASCADE"
 });
 
 // Categories have many Products
-Category.hasMany(Product, {
-  foreignKey: 'category_id',
+User.hasMany(Usergames, {
+  foreignKey: 'user_id',
   onDelete: "CASCADE"
 });
 // Products belongToMany Tags (through ProductTag)
