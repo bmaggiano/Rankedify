@@ -30,7 +30,16 @@ router.post('/comments', async (req, res) => {
     try {
         const comment = await Comments.create({
             username: req.body.username
-        })
+        }); 
+
+        const comments = commentData.map((gallery) =>
+        gallery.get({ plain: true })
+      );
+
+      res.render(//need reference to handlebar, {
+        //comments }
+      );
+
     } catch {
 
     }
