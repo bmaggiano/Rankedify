@@ -1,8 +1,10 @@
 const router = require('express').Router();
+const { Comments } = require('../../models')
 
-router.post('/comment/', async (req, res) => {
+//Creates new comment
+router.post('/comments', async (req, res) => {
     try {
-
+        const comment = 
     } catch {
 
     }
