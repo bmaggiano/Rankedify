@@ -1,6 +1,4 @@
 const { Model, DataTypes } = require('sequelize');
-const { usergames, Usergames } = require('.');
-
 const sequelize = require('../config/connection');
 
 class Usergames extends Model {}
