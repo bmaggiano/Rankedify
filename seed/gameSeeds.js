@@ -22,7 +22,6 @@ const seedGames = async () => {
     const arrayOfResponses = await Promise.all(
         urls.map((url) =>
             axios.get(url)
-                // .then((data) => (data.data.results))
         )
     );
 // console.log(arrayOfResponses)

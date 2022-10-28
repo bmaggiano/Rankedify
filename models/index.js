@@ -1,19 +1,20 @@
-const Comments = require("./Comments")
-const Games = require("./Games")
+// const Comments = require("./Comments")
 const User = require("./User")
+const Games = require("./Games")
 const Usergames = require("./Usergames")
 
-Usergames.belongsTo(User, {
+
+// Categories have many Products
+User.belongsToMany(Games, {
   foreignKey: 'user_id',
-  onDelete: "CASCADE"
-});
+  through: {model: Usergames,
+    unique: false},});
 
-
-User.hasMany(Usergames, {
+Games.belongsToMany(User, {
+  through: {model: Usergames,
+  unique: false},
   foreignKey: 'user_id',
-  onDelete: "CASCADE"
 });
-
 
 Games.belongsToMany(User, {
   through: Usergames,

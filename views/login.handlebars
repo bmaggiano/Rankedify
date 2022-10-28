@@ -1,23 +1,31 @@
+<nav class="d-flex p-2" id="loginPageNavBTN">
+    <button type="button" id="loginPageNavBTN" class=" btn btn-outline-dark"><a href="/"
+            id="loginPageNavBTN">Home</a></button>
+    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark">My list</a>
+    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark">About us</a>
+</nav>
+<h1 id="titleHeaderTextLogin" class="d-flex">Rankedify</h1>
+
 <body id="loginBody">
-    <section id='loginArea' class="container-fluid d-flex">
-        <div>
+    </nav>
+    <div id='loginArea' class=>
+        <div id="logInForm" class="col-12">
             <h2 id="loginText">Log in</h2>
             <form>
                 <div>
-                    <label id="loginLabel" for="email-login">Email:</label>
-                    <input type="text" id="email-login" />
+                    <input type="email" id="email-login" class="form-control" placeholder="Enter Valid Email" />
                 </div>
                 <div>
-                    <label id="loginLabel" for="password-login">Password:</label>
-                    <input type="password" id="password-login" />
+                    <input type="password" id="password-login" class="form-control"
+                        placeholder="Enter Valid Password" />
                 </div>
                 <div>
-                    <button type="submit">login</button>
+                    <button type="submit" id="logInBTN">LOG IN</button>
                 </div>
             </form>
         </div>
         <div>
-    </section>
+        </div>
 
-    <script src="../public/js/login.js"></script>
+        <script src="../public/js/login.js"></script>
 </body>
