@@ -45,9 +45,10 @@ router.get('/list/:id', async (req, res) => {
 
 router.get('/signup', async (req, res) => {
     try {
+        res.render('signup')
 
-    } catch {
-
+    } catch (err) {
+        res.status(500).json(err);
     }
 });
 

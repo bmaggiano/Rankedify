@@ -1,17 +1,17 @@
 <body id="homepageBody">
-    <nav class="d-flex p-2">
+    <nav class="d-flex p-2" id="homepage-nav">
         {{#if loggedIn}}
-        <button type="button" id="navBTN" class="btn btn-outline-light">Log out</button>
+        <button type="button" id="navBTN-Homepage" class="btn btn-outline-light">Log out</button>
         {{else}}
-        <button type="button" id="navBTN" class="btn btn-outline-light">Log in</button>
+        <button type="button" id="navBTN-Homepage" class=" btn btn-outline-light"><a href="/login"
+                id="loginInNavBTN">Log
+                in</a></button>
         {{/if}}
-        <a type="button" id="navBTN" class="btn btn-outline-light">My list</a>
-        <a type="button" id="navBTN" class="btn btn-outline-light">About us</a>
+        <a type="button" id="navBTN-Homepage" class="btn btn-outline-light">My list</a>
+        <a type="button" id="navBTN-Homepage" class="btn btn-outline-light">About us</a>
     </nav>
+    <h1 id="titleHeaderText" class="d-flex">Rankedify</h1>
     <section id="titleHeader" class="">
-        <h1 id="titleHeaderText" class="">Rankedify</h1>
-        <div id="nav" class="">
-        </div>
         <div id="intro">Choose your favorite games and share them with the world.</div>
         <div id="intro2"><span id="homeLogIn"><a id='spanLogIn' href="/login">Log in </a></span>and start sharing.</div>
         <div id="intro3">Dont have an account? <span id="homeLogIn"><a id="spanLogIn" href="/signup">Sign up</a></span>
