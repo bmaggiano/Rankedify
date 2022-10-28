@@ -16,15 +16,15 @@ Games.belongsToMany(User, {
   foreignKey: 'user_id',
 });
 
-Games.belongsToMany(User, {
-  through: Usergames,
-  foreignKey: 'user_id',
-});
+// Games.belongsToMany(User, {
+//   through: Usergames,
+//   foreignKey: 'user_id',
+// });
 
-User.belongsToMany(Games, {
-  through: Usergames,
-  foreignKey: 'game_id',
-});
+// User.belongsToMany(Games, {
+//   through: Usergames,
+//   foreignKey: 'game_id',
+// });
 
 module.exports = {
   Comments,  

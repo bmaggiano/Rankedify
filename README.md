@@ -86,16 +86,14 @@
 * [Bootstrap](https://fonts.google.com/)
 * [Connect Session Sequelize](https://www.npmjs.com/package/connect-session-sequelize)
 * [Dontenv](https://www.npmjs.com/package/dotenv)
-* [Express](https://fonts.google.com/)
-* [Express Handlebars](https://fonts.google.com/)
-* [Express Session](https://fonts.google.com/)
-* [MySql2](https://fonts.google.com/)
-* [Sequilize](https://fonts.google.com/)
-* [TailWind-CSS](https://tailwindcss.com/)
-* Drink API:
-    * [The Cocktail DB API](https://rapidapi.com/thecocktaildb/api/the-cocktail-db/)
-* Movie API:
-    * [TMDB Movie API](https://www.themoviedb.org/documentation/api)
+* [Express](https://www.npmjs.com/package/express)
+* [Express Handlebars](https://www.npmjs.com/package/express-handlebars)
+* [Express Session](https://www.npmjs.com/package/express-session)
+* [MySql2](https://www.npmjs.com/package/mysql2)
+* [Sequilize](https://www.npmjs.com/package/sequelize)
+* Game API:
+    * [API](https://url.com)
+
 
 ----
 
