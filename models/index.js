@@ -24,7 +24,7 @@ User.belongsToMany(Games, {
   through: Usergames,
   foreignKey: 'game_id',
 });
-=======
+
 // User.hasMany(Games, {
 //   through: Usergames,
 //   foreignKey: 'game_id',
