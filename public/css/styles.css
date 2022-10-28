@@ -14,6 +14,14 @@
     background-size: cover;
 }
 
+#signupBody {
+    background-image: url(../assets/images/Elden\ Ring.png);
+    height: 1297px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #titleHeader {
     justify-content: center;
     text-align: center;
@@ -33,6 +41,16 @@
 #titleHeaderTextLogin {
     padding-top: 30px;
     color: rgb(0, 0, 0);
+    font-size: 56px;
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    justify-content: center;
+}
+
+#titleHeaderTextSignup {
+    padding-top: 30px;
+    color: rgb(252, 252, 252);
     font-size: 56px;
     animation: fadeInAnimation ease 5s;
     animation-iteration-count: 1;
@@ -87,6 +105,15 @@
 
 }
 
+#signupPageNavBTN {
+    justify-content: flex-end;
+    margin: 10px 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+
+}
+
 
 
 #homepage-nav {
@@ -122,6 +149,11 @@
     padding-right: 50px;
 
 }
+#signupForm {
+    padding-top: 20%;
+    padding-right: 50px;
+
+}
 
 #userName-login {
     opacity: 0;
@@ -139,6 +171,44 @@
     animation: fadeInAnimation 2s ease 2s 1 forwards;
 }
 
+#email-signup {
+    opacity: 0;
+    margin-left: 40%;
+    width: 19%;
+    animation: fadeInAnimation 2s ease 1s 1 forwards;
+}
+
+#username-signup {
+    opacity: 0;
+    margin-left: 40%;
+    width: 19%;
+    animation: fadeInAnimation 2s ease 2s 1 forwards;
+}
+
+#password-signup {
+    opacity: 0;
+    margin-left: 40%;
+    width: 19%;
+    animation: fadeInAnimation 2s ease 2s 1 forwards;
+}
+
+#signupText {
+    opacity: 0;
+    text-align: center;
+    color: rgb(239, 235, 235);
+    font-size: 60px;
+    padding-right: 25px;
+    animation: fadeInAnimation 2s ease 1s 1 forwards;
+}
+
+#label{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding-right: 25px;
+    margin-left: 40%;
+    animation: fadeInAnimation 2s ease 1s 1 forwards;
+}
 
 @keyframes fadeInAnimation {
     0% {
@@ -151,8 +221,12 @@
     }
 }
 
+#btn64-submit{
+    margin-top: 10;
+}
 
 .button-64 {
+    margin-left: 40%;
     align-items: center;
     background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
     border: 0;
