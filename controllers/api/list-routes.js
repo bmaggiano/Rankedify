@@ -18,7 +18,7 @@ router.post('/list', async (req, res) => {
         res.status(500).json(err)
     }
 });
-//
+//need code to compare id.. use data.id from games table to reference.. npm package
 router.put('/list/:id', async (req, res) => {
     try {
         let updateList = await User.update(req.body, {
