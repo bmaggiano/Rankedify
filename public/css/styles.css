@@ -1,14 +1,14 @@
 #homepageBody {
     background-image: url(../assets/images/alexey-savchenko-k4Akpt5-Sfk-unsplash.jpg);
-    height: 1200px;
+    height: 1297px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #loginBody {
-    background-image: url(../assets/images/Fallout2.png);
-    height: 1200px;
+    background-image: url(../assets/images/Sekiro3.png);
+    height: 1297px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,6 +27,17 @@
     animation: fadeInAnimation ease 5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    justify-content: center;
+}
+
+#titleHeaderTextLogin {
+    padding-top: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 56px;
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    justify-content: center;
 }
 
 
@@ -62,37 +73,73 @@
     text-decoration: none;
 }
 
-nav {
+#loginInNavBTN {
+    text-decoration: none;
+    color: white;
+}
+
+#loginPageNavBTN {
+    justify-content: flex-end;
+    margin: 10px 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+
+}
+
+
+
+#homepage-nav {
     justify-content: flex-end;
 }
 
-#navBTN {
+#navBTN-Homepage {
     margin: 10px 10px;
     color: white;
+    font-size: 22px;
 }
 
 #email-login {
-    color: aliceblue;
-    width: 30%;
+    margin-bottom: 20px;
+    margin-top: 20px;
 
 }
 
-#loginArea {
-    padding-top: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+#logInBTN {
+    opacity: 0;
+    margin-top: 20px;
+    margin-left: 48%;
+    animation: fadeInAnimation 2s ease 2s 1 forwards;
 }
 
 #loginText {
+    opacity: 0;
     text-align: center;
-    color: white;
+    color: rgb(23, 22, 22);
     font-size: 60px;
+    padding-right: 25px;
+    animation: fadeInAnimation 2s ease 1s 1 forwards;
 }
 
-#loginLabel {
-    color: aliceblue;
-    font-size: 45px;
+#logInForm {
+    padding-top: 20%;
+    padding-right: 50px;
+
+}
+
+#email-login {
+    opacity: 0;
+    margin-left: 40%;
+    width: 19%;
+    animation: fadeInAnimation 2s ease 1s 1 forwards;
+}
+
+#password-login {
+    opacity: 0;
+    margin-left: 40%;
+    width: 19%;
+    animation: fadeInAnimation 2s ease 2s 1 forwards;
 }
 
 
@@ -106,6 +153,7 @@ nav {
         opacity: 1;
     }
 }
+
 
 .button-64 {
     align-items: center;
