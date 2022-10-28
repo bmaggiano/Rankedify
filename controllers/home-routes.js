@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const Usergames = require('../models/Usergames');
 const Games = require('../models/Games');
+const seedGames = require('../seed/gameSeeds');
 
 router.get('/', async (req, res) => {
     try {
@@ -21,7 +22,7 @@ router.get('/login', async (req, res) => {
 router.get('/list', async (req, res) => {
     try {
         const listData = await Usergames.findAll({
-            include: [{model: Games, through: Usergames}]
+            // include: [{model: Games, through: Usergames}]
         });
 
         if (!listData) {
