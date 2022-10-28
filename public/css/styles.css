@@ -1,31 +1,17 @@
+#titleHeader {
+    justify-content: center;
+    text-align: center;
+
+}
+
+
+/* -----------------------------homepage-------------------------------------- */
 #homepageBody {
     background-image: url(../assets/images/alexey-savchenko-k4Akpt5-Sfk-unsplash.jpg);
     height: 1297px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-#loginBody {
-    background-image: url(../assets/images/Sekiro3.png);
-    height: 1297px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#signupBody {
-    background-image: url(../assets/images/Elden\ Ring.png);
-    height: 1297px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#titleHeader {
-    justify-content: center;
-    text-align: center;
-
 }
 
 #titleHeaderText {
@@ -37,27 +23,6 @@
     animation-fill-mode: forwards;
     justify-content: center;
 }
-
-#titleHeaderTextLogin {
-    padding-top: 30px;
-    color: rgb(0, 0, 0);
-    font-size: 56px;
-    animation: fadeInAnimation ease 5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    justify-content: center;
-}
-
-#titleHeaderTextSignup {
-    padding-top: 30px;
-    color: rgb(252, 252, 252);
-    font-size: 56px;
-    animation: fadeInAnimation ease 5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    justify-content: center;
-}
-
 
 #intro {
     opacity: 0;
@@ -96,25 +61,6 @@
     color: white;
 }
 
-#loginPageNavBTN {
-    justify-content: flex-end;
-    margin: 10px 10px;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-size: 22px;
-
-}
-
-#signupPageNavBTN {
-    justify-content: flex-end;
-    margin: 10px 10px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 22px;
-
-}
-
-
 
 #homepage-nav {
     justify-content: flex-end;
@@ -126,7 +72,38 @@
     font-size: 22px;
 }
 
+/* -----------------------------homepage-------------------------------------- */
 
+
+/*------------------------------Login Page------------------------------------ */
+#loginBody {
+    background-image: url(../assets/images/Sekiro3.png);
+    height: 1297px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#titleHeaderTextLogin {
+    padding-top: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 56px;
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    justify-content: center;
+}
+
+
+
+#loginPageNavBTN {
+    justify-content: flex-end;
+    margin: 10px 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+
+}
 
 #logInBTN {
     opacity: 0;
@@ -149,11 +126,6 @@
     padding-right: 50px;
 
 }
-#signupForm {
-    padding-top: 20%;
-    padding-right: 50px;
-
-}
 
 #userName-login {
     opacity: 0;
@@ -169,6 +141,43 @@
     margin-left: 40%;
     width: 19%;
     animation: fadeInAnimation 2s ease 2s 1 forwards;
+}
+
+/*------------------------------Login Page------------------------------------ */
+
+
+/*-----------------------------Signup Page------------------------------------ */
+#signupBody {
+    background-image: url(../assets/images/Elden\ Ring.png);
+    height: 1297px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#titleHeaderTextSignup {
+    padding-top: 30px;
+    color: rgb(252, 252, 252);
+    font-size: 56px;
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    justify-content: center;
+}
+
+#signupPageNavBTN {
+    justify-content: flex-end;
+    margin: 10px 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+
+}
+
+#signupForm {
+    padding-top: 20%;
+    padding-right: 50px;
+
 }
 
 #email-signup {
@@ -201,7 +210,7 @@
     animation: fadeInAnimation 2s ease 1s 1 forwards;
 }
 
-#label{
+#label {
     color: white;
     text-align: center;
     font-size: 30px;
@@ -209,6 +218,9 @@
     margin-left: 40%;
     animation: fadeInAnimation 2s ease 1s 1 forwards;
 }
+
+/*-----------------------------Signup Page------------------------------------ */
+
 
 @keyframes fadeInAnimation {
     0% {
@@ -221,7 +233,7 @@
     }
 }
 
-#btn64-submit{
+#btn64-submit {
     margin-top: 10;
 }
 

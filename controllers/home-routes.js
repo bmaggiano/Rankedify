@@ -10,7 +10,6 @@ router.get('/', async (req, res) => {
     }
 });
 
-// router.get('/userP')
 
 router.get('/login', async (req, res) => {
     try {
@@ -36,9 +35,7 @@ router.get('/list', async (req, res) => {
 
         res.status(200).json(listData)
 
-        // res.render('', {
-        //     list
-        // })
+
     } catch (err) {
         console.error(err)
         res.status(500).json(err)
@@ -59,7 +56,6 @@ router.get('/list/:id', async (req, res) => {
                 res.status(404).json({ message: 'No list associated with this user!' });
                 return;  
             }
-            // const list = listData.get({ plain: true });
             const list = await listData.map((listItem) => listItem.get({plain:true}))
 
 
@@ -67,7 +63,6 @@ router.get('/list/:id', async (req, res) => {
                 list,
                 logged_in: req.session.logged_in,
             })
-            // res.status(200).json(listData)
 
     } catch (err) {
         console.error(err)
