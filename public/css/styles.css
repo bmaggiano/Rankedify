@@ -88,17 +88,15 @@
     padding-top: 30px;
     color: rgb(0, 0, 0);
     font-size: 56px;
-    animation: fadeInAnimation ease 5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
     justify-content: center;
+    padding-bottom: 90px;
 }
 
 
 
 #loginPageNavBTN {
     justify-content: flex-end;
-    margin: 10px 10px;
+    margin: 0px 10px;
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-size: 22px;
@@ -106,41 +104,65 @@
 }
 
 #logInBTN {
-    opacity: 0;
-    margin-top: 20px;
+
+    margin-top: 5px;
     margin-left: 48%;
-    animation: fadeInAnimation 2s ease 2s 1 forwards;
+
 }
 
 #loginText {
-    opacity: 0;
     text-align: center;
     color: rgb(23, 22, 22);
     font-size: 60px;
     padding-right: 25px;
-    animation: fadeInAnimation 2s ease 1s 1 forwards;
+}
+
+#signupSpan {
+    color: red;
+    text-decoration: none;
+}
+
+
+#logingDescription1 {
+    text-align: center;
+    color: rgb(23, 22, 22);
+    font-size: 45px;
+    padding-right: 25px;
+    padding-top: 50px;
+}
+
+#logingDescription2 {
+    text-align: center;
+    color: rgb(23, 22, 22);
+    font-size: 45px;
+    padding-right: 25px;
 }
 
 #logInForm {
-    padding-top: 20%;
+    padding-top: 4%;
     padding-right: 50px;
 
 }
 
 #userName-login {
-    opacity: 0;
+
     margin-left: 40%;
     width: 19%;
-    animation: fadeInAnimation 2s ease 1s 1 forwards;
+
     margin-bottom: 20px;
     margin-top: 20px;
 }
 
 #password-login {
-    opacity: 0;
+
     margin-left: 40%;
     width: 19%;
-    animation: fadeInAnimation 2s ease 2s 1 forwards;
+
+}
+
+#HERE-BTN {
+    text-decoration: none;
+    color: red;
 }
 
 /*------------------------------Login Page------------------------------------ */
