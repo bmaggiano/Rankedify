@@ -6,15 +6,14 @@ const Usergames = require("./Usergames")
 
 // Categories have many Products
 User.belongsToMany(Games, {
-  foreignKey: 'user_id',
   through: {model: Usergames,
     unique: false},});
 
 Games.belongsToMany(User, {
   through: {model: Usergames,
   unique: false},
-  foreignKey: 'user_id',
 });
+
 
 Games.belongsToMany(User, {
   through: Usergames,
@@ -25,6 +24,17 @@ User.belongsToMany(Games, {
   through: Usergames,
   foreignKey: 'game_id',
 });
+=======
+// User.hasMany(Games, {
+//   through: Usergames,
+//   foreignKey: 'game_id',
+// });
+
+// Games.belongsToMany(User, {
+//   through: Usergames,
+//   foreignKey: 'user_id',
+// });
+
 
 module.exports = {
   Comments,  
