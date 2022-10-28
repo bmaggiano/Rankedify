@@ -2,17 +2,11 @@
     <section class="profile">
         <div class="profile-picture"></div>
         <div class="userame-title">
-            <h2><!--user's username here--></h2>
+            <h2></h2>
         </div>
-        <div class="user-list">
-            <ol id="user-top5">
-                <li id="rank1"><!----></li>
-                <li id="rank2"><!----></li>
-                <li id="rank3"><!----></li>
-                <li id="rank4"><!----></li>
-                <li id="rank5"><!----></li>
-            </ol>
-        </div>
+        {{#each list.games.[].game_name}}
+        {{/each}}
+
     </section>
 
     <script src="/js/login.js"></script>
