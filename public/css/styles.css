@@ -14,6 +14,14 @@
     background-size: cover;
 }
 
+#signupBody {
+    background-image: url(../assets/images/Elden\ Ring.png);
+    height: 1297px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #titleHeader {
     justify-content: center;
     text-align: center;
