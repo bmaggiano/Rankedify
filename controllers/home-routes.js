@@ -48,16 +48,24 @@ router.get('/list', async (req, res) => {
 router.get('/list/:id', async (req, res) => {
     try {
         const listData = await User.findByPk(req.params.id, {
-            include: [{model: Games, through: Usergames}],
+            include: [
+                {
+                model: Games, 
+                through: Usergames,
+                    attributes: ["game_name"]
+                }],
         });
             if (!listData) {
                 res.status(404).json({ message: 'No list associated with this user!' });
                 return;  
             }
+            // const list = listData.get({ plain: true });
+            const list = await listData.map((listItem) => listItem.get({plain:true}))
+
+
             res.render('userProfile', {
-                listData,
+                list,
                 logged_in: req.session.logged_in,
-                user_id
             })
             // res.status(200).json(listData)
 
