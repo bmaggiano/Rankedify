@@ -19,6 +19,14 @@ router.get('/login', async (req, res) => {
     }
 });
 
+// router.get('/user-profile', async (req, res) => {
+//     try {
+//         res.render('userProfile')
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
+
 
 //incomplete, need to change this res.render to actual handlebars
 router.get('/list', async (req, res) => {
@@ -56,7 +64,8 @@ router.get('/list/:id', async (req, res) => {
                 res.status(404).json({ message: 'No list associated with this user!' });
                 return;  
             }
-            const list = await listData.map((listItem) => listItem.get({plain:true}))
+
+            const list = listData.get({ plain: true });
 
 
             res.render('userProfile', {
