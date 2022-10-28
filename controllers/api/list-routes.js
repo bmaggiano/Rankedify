@@ -21,19 +21,32 @@ router.post('/list', async (req, res) => {
 //
 router.put('/list/:id', async (req, res) => {
     try {
-
-    } catch {
-
+        let updateList = await User.update(req.body, {
+            where: {
+                id: req.params.id
+            }
+        })
+        if (!updateList[0]) return res.status(404).json("List not found");
+        res.status(200).json(updateList);
     }
-});
+    catch (err) {
+        res.status(500).json(err);
+}});
 
 router.delete('/list/:id', async (req, res) => {
     try {
-
-    } catch {
-
+        let deletedList = await User.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        if (!deletedList) return res.status(404).json("List not found");
+        res.status(200).json(deletedList);
+    } catch (err) {
+        res.status(500).json(err);
     }
 });
+
 
 
 module.exports = router;
