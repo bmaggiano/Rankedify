@@ -22,7 +22,7 @@ router.post('/signup', async (req, res) => {
   }
 });
 
-//Login for the user
+// Login for the user
 router.post('/login', async (req, res) => {
   try {
     const dbUserData = await User.findOne({
@@ -51,8 +51,9 @@ router.post('/login', async (req, res) => {
       req.session.loggedIn = true;
       req.session.user_id = dbUserData.id;
 
-      res
-        .status(200).json({ user: dbUserData, message: 'You are now logged in!' });
+      res.render('userProfile', {
+        dbUserData
+      })    
     });
   } catch (err) {
     res.status(500).json(err);
