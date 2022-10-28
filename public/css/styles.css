@@ -99,11 +99,6 @@
     font-size: 22px;
 }
 
-#email-login {
-    margin-bottom: 20px;
-    margin-top: 20px;
-
-}
 
 
 #logInBTN {
@@ -128,11 +123,13 @@
 
 }
 
-#email-login {
+#userName-login {
     opacity: 0;
     margin-left: 40%;
     width: 19%;
     animation: fadeInAnimation 2s ease 1s 1 forwards;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 #password-login {
