@@ -61,6 +61,10 @@
     color: white;
 }
 
+#loginInNavBTN:hover {
+    color: black;
+
+}
 
 #homepage-nav {
     justify-content: flex-end;
@@ -72,12 +76,26 @@
     font-size: 22px;
 }
 
+#navBTN-Homepage:hover {
+    color: black;
+
+}
+
+.raise:hover,
+.raise:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    color: #ffa260
+}
+
+
 /* -----------------------------homepage-------------------------------------- */
 
 
 /*------------------------------Login Page------------------------------------ */
 #loginBody {
-    background-image: url(../assets/images/Sekiro3.png);
+    background-image: url(../assets/images/R.jpg);
+    /* background-image: url(../assets/images/Sekiro3.png); */
     height: 1297px;
     background-position: center;
     background-repeat: no-repeat;
@@ -92,9 +110,15 @@
     padding-bottom: 90px;
 }
 
-
-
 #loginPageNavBTN {
+    margin: 0px 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+
+}
+
+#HomeBTN {
     justify-content: flex-end;
     margin: 0px 10px;
     text-decoration: none;
@@ -106,8 +130,26 @@
 #logInBTN {
 
     margin-top: 5px;
-    margin-left: 48%;
+    margin-left: 47.8%;
+    font-size: 22px;
+}
 
+#loginNavBar {
+    justify-content: flex-end;
+}
+
+#loginPageNavBTN:hover,
+#loginPageNavBTN:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    color: white;
+}
+
+#HomeBTN:hover,
+#HomeBTN:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    color: white;
 }
 
 #loginText {
@@ -122,16 +164,15 @@
     text-decoration: none;
 }
 
-
-#logingDescription1 {
+#loginDescription1 {
     text-align: center;
     color: rgb(23, 22, 22);
     font-size: 45px;
     padding-right: 25px;
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
-#logingDescription2 {
+#loginDescription2 {
     text-align: center;
     color: rgb(23, 22, 22);
     font-size: 45px;
@@ -139,25 +180,44 @@
 }
 
 #logInForm {
-    padding-top: 4%;
+    padding-top: 10%;
     padding-right: 50px;
-
 }
 
 #userName-login {
-
+    color: black;
+    text-align: center;
     margin-left: 40%;
     width: 19%;
-
     margin-bottom: 20px;
     margin-top: 20px;
+    background-color: rgba(0, 0, 0, .5);
 }
 
-#password-login {
+input::-webkit-input-placeholder {
+    color: rgb(255, 255, 255) !important;
+}
 
+input:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgb(255, 255, 255) !important;
+}
+
+input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgb(255, 255, 255) !important;
+}
+
+input:-ms-input-placeholder {
+    color: rgb(255, 255, 255) !important;
+}
+
+
+#password-login {
+    text-align: center;
     margin-left: 40%;
     width: 19%;
-
+    background-color: rgba(0, 0, 0, .5);
 }
 
 #HERE-BTN {
@@ -181,9 +241,6 @@
     padding-top: 30px;
     color: rgb(252, 252, 252);
     font-size: 56px;
-    animation: fadeInAnimation ease 5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
     justify-content: center;
 }
 
@@ -199,37 +256,37 @@
 #signupForm {
     padding-top: 20%;
     padding-right: 50px;
-
 }
 
 #email-signup {
-    opacity: 0;
     margin-left: 40%;
     width: 19%;
-    animation: fadeInAnimation 2s ease 1s 1 forwards;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#email-signup-text {
+    background-color: rgba(0, 0, 0, .8);
+    border: thin solid white;
+    padding: 10px;
 }
 
 #username-signup {
-    opacity: 0;
     margin-left: 40%;
     width: 19%;
-    animation: fadeInAnimation 2s ease 2s 1 forwards;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 #password-signup {
-    opacity: 0;
     margin-left: 40%;
     width: 19%;
-    animation: fadeInAnimation 2s ease 2s 1 forwards;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 #signupText {
-    opacity: 0;
     text-align: center;
     color: rgb(239, 235, 235);
     font-size: 60px;
     padding-right: 25px;
-    animation: fadeInAnimation 2s ease 1s 1 forwards;
 }
 
 #label {
@@ -238,11 +295,62 @@
     font-size: 30px;
     padding-right: 25px;
     margin-left: 40%;
-    animation: fadeInAnimation 2s ease 1s 1 forwards;
 }
+
+#signInBTN {
+    margin-top: 75px;
+    margin-left: 47.8%;
+    font-size: 22px;
+}
+
+#signupPageNavBTN:hover,
+#signupPageNavBTN:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    color: rgb(0, 0, 0);
+}
+
+#signInBTN:hover,
+#signInBTN:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    color: rgb(0, 0, 0);
+}
+
 
 /*-----------------------------Signup Page------------------------------------ */
 
+/*-------------------------- User Input Page---------------------------------- */
+#userInpBody {
+    background-image: url(../assets/images/artwork-the-witcher-3-wild-hunt-hd.jpg);
+    height: 1297px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#titleHeaderTextUserInp {
+    padding-top: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 56px;
+    justify-content: center;
+}
+
+#signupPageNavBTN {
+    justify-content: flex-end;
+    margin: 10px 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+
+}
+
+#userInpNavBar {
+    justify-content: flex-end;
+}
+
+
+/*-------------------------- User Input Page---------------------------------- */
 
 @keyframes fadeInAnimation {
     0% {
@@ -255,7 +363,7 @@
     }
 }
 
-#btn64-submit {
+/* #btn64-submit {
     margin-top: 10;
 }
 
@@ -307,4 +415,4 @@
         font-size: 24px;
         min-width: 196px;
     }
-}
+} */
