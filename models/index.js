@@ -20,15 +20,7 @@ Games.belongsToMany(User, {
 });
 
 
-<<<<<<< HEAD
-
-
-
 module.exports = {
-=======
-module.exports = {
-  // Comments,
->>>>>>> 1b5556709d8131b7e3bf8858f5babfad05418f81
   Games,
   User,
   Usergames
