@@ -1,4 +1,4 @@
-const Usergames = require('../../models/Usergames');
+const { Usergames } = require('../../models/');
 
 const router = require('express').Router();
 

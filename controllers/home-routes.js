@@ -19,14 +19,6 @@ router.get('/login', async (req, res) => {
     }
 });
 
-// router.get('/user-profile', async (req, res) => {
-//     try {
-//         res.render('userProfile')
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-// });
-
 
 //incomplete, need to change this res.render to actual handlebars
 router.get('/list', async (req, res) => {

@@ -58,12 +58,12 @@
 
 #loginInNavBTN {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
-#navBTN-homepage:hover {
-
+#loginInNavBTN:hover {
     color: black;
+
 }
 
 #homepage-nav {
@@ -75,6 +75,19 @@
     color: white;
     font-size: 22px;
 }
+
+#navBTN-Homepage:hover {
+    color: black;
+
+}
+
+.raise:hover,
+.raise:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    color: #ffa260
+}
+
 
 /* -----------------------------homepage-------------------------------------- */
 
@@ -98,6 +111,14 @@
 }
 
 #loginPageNavBTN {
+    margin: 0px 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+
+}
+
+#HomeBTN {
     justify-content: flex-end;
     margin: 0px 10px;
     text-decoration: none;
@@ -109,8 +130,31 @@
 #logInBTN {
 
     margin-top: 5px;
-    margin-left: 47%;
+    margin-left: 47.8%;
+    font-size: 22px;
 }
+
+#loginNavBar {
+    justify-content: flex-end;
+}
+
+#loginPageNavBTN:hover,
+#loginPageNavBTN:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    color: white;
+}
+
+#HomeBTN:hover,
+#HomeBTN:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    color: white;
+}
+
+
+
+
 
 #loginText {
     text-align: center;
@@ -124,7 +168,7 @@
     text-decoration: none;
 }
 
-#logingDescription1 {
+#loginDescription1 {
     text-align: center;
     color: rgb(23, 22, 22);
     font-size: 45px;
@@ -132,7 +176,7 @@
     padding-top: 30px;
 }
 
-#logingDescription2 {
+#loginDescription2 {
     text-align: center;
     color: rgb(23, 22, 22);
     font-size: 45px;
