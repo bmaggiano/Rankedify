@@ -4,15 +4,9 @@
         <div class="userame-title">
             <h2></h2>
         </div>
-        <div class="user-list">
-            <ol id="user-top5">
-                <li id="rank1">{{list.games.[0].game_name}}</li>
-                <li id="rank2"><!----></li>
-                <li id="rank3"><!----></li>
-                <li id="rank4"><!----></li>
-                <li id="rank5"><!----></li>
-            </ol>
-        </div>
+        {{#each list.games.[].game_name}}
+        {{/each}}
+
     </section>
 
     <script src="/js/login.js"></script>
