@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rankedify</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="./assets/css/style.css" rel="stylesheet">
-</head>
-<nav>
-
-</nav>
+<nav class="d-flex p-2" id="homepage-nav">
+        {{#if loggedIn}}
+        <button type="button" id="navBTN-Homepage" class="btn btn-outline-light raise navBTN-Homepage">Log out</button>
+        {{else}}
+        <button type="button" id="navBTN-Homepage" class=" btn btn-outline-light raise navBTN-Homepage"><a href="/login"
+                id="loginInNavBTN">Log
+                in</a></button>
+        {{/if}}
+        <a type="button" id="navBTN-Homepage" class="btn btn-outline-light raise navBTN-Homepage" href="/list/:id">My list</a>
+    </nav>
 <div class="aboutUs bg-gray-900	 text-white  text-center p-50 ">
     <h1 class="aboutContainer text-[50px] d-flex justify-items-center">About Us</h1>
     <div class="aboutColumn bg-gray-900	 text-white  text-center p-5 flex-wrap flex justify-center justify-around">
@@ -52,6 +48,7 @@
                 class="card-Mig underline underline-offset-8 decoration-2">Github Link</a>
         </div>
     </div>
+    
 </div>
 
 </body>
