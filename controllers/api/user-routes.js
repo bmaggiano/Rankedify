@@ -14,7 +14,7 @@ router.post('/signup', async (req, res) => {
       req.session.loggedIn = true;
       req.session.user_id = dbUserData.id;
 
-      res.status(200).json(dbUserData);
+      res.render('userProfile')
     });
   } catch (err) {
     console.error(err)
