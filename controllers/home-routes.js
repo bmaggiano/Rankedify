@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const { Usergames, Games, User } = require('../models/');
 const seedGames = require('../seed/gameSeeds');
+// const withAuth = require('../utils/auth');
+const withAuth = require('../utils/auth')
 
 router.get('/', async (req, res) => {
     try {
@@ -21,7 +23,7 @@ router.get('/login', async (req, res) => {
 
 
 //incomplete, need to change this res.render to actual handlebars
-router.get('/list', async (req, res) => {
+router.get('/list', withAuth, async (req, res) => {
     try {
         const listData = await User.findAll({
             include: [{ model: Games, through: Usergames }]
@@ -33,7 +35,10 @@ router.get('/list', async (req, res) => {
         }
         const list = await listData.map((listItem) => listItem.get({ plain: true }))
 
-        res.status(200).json(listData)
+        // res.status(200).json(listData)
+        res.render('userProfile', {
+            list
+        })
 
 
     } catch (err) {
@@ -42,7 +47,7 @@ router.get('/list', async (req, res) => {
     }
 });
 
-router.get('/list/:id', async (req, res) => {
+router.get('/list/:id', withAuth, async (req, res) => {
     try {
         const listData = await User.findByPk(req.params.id, {
             include: [
