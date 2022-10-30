@@ -1,14 +1,14 @@
 <body id="homepageBody">
     <nav class="d-flex p-2" id="homepage-nav">
         {{#if loggedIn}}
-        <button type="button" id="navBTN-Homepage" class="btn btn-outline-light">Log out</button>
+        <button type="button" id="navBTN-Homepage" class="btn btn-outline-light raise navBTN-Homepage">Log out</button>
         {{else}}
-        <button type="button" id="navBTN-Homepage" class=" btn btn-outline-light"><a href="/login"
+        <button type="button" id="navBTN-Homepage" class=" btn btn-outline-light raise navBTN-Homepage"><a href="/login"
                 id="loginInNavBTN">Log
                 in</a></button>
         {{/if}}
-        <a type="button" id="navBTN-Homepage" class="btn btn-outline-light" href="/list/2">My list</a>
-        <a type="button" id="navBTN-Homepage" class="btn btn-outline-light">About us</a>
+        <a type="button" id="navBTN-Homepage" class="btn btn-outline-light raise navBTN-Homepage" href="/list/:id">My list</a>
+        <a type="button" id="nav-btn-aboutus" class="btn btn-outline-light raise navBTN-Homepage">About us</a>
     </nav>
     <h1 id="titleHeaderText" class="d-flex">Rankedify</h1>
     <section id="titleHeader" class="">
@@ -17,4 +17,5 @@
         <div id="intro3">Dont have an account? <span id="homeLogIn"><a id="spanLogIn" href="/signup">Sign up</a></span>
             for free.</div>
     </section>
+    <script src="/js/aboutUs.js"></script>
 </body>
