@@ -374,8 +374,24 @@ input:-ms-input-placeholder {
     100% {
         opacity: 1;
     }
+} 
+
+/*-------------------------- About Us Page---------------------------------- */
+.mainContainer {
+    background-image: url(/assets/images/bluebg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+.aboutContent {
+    padding: 20px;
+}
+
+.aboutProfilePic {
+    justify-content: center;
+    padding-left: 10px;
+}
 /* #btn64-submit {
     margin-top: 10;
 }
