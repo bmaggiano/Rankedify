@@ -1,13 +1,14 @@
-<body id="homepageBody">
+<div id="homepageBody">
     <nav class="d-flex p-2" id="homepage-nav">
         {{#if loggedIn}}
-        <button type="button" id="navBTN-Homepage" class="btn btn-outline-light raise navBTN-Homepage">Log out</button>
+        <button type="button" id="navBTN-Homepage" class="btn btn-outline-light navBTN-Homepage">Log out</button>
         {{else}}
-        <button type="button" id="navBTN-Homepage" class=" btn btn-outline-light raise navBTN-Homepage"><a href="/login"
+        <button type="button" id="navBTN-Homepage" class=" btn btn-outline-light navBTN-Homepage"><a href="/login"
                 id="loginInNavBTN">Log
                 in</a></button>
         {{/if}}
-        <a type="button" id="navBTN-Homepage" class="btn btn-outline-light raise navBTN-Homepage" href="/list/:id">My list</a>
+        <a type="button" id="navBTN-Homepage" class="btn btn-outline-light raise navBTN-Homepage" href="/list/:id">My
+            list</a>
         <a type="button" id="nav-btn-aboutus" class="btn btn-outline-light raise navBTN-Homepage">About us</a>
     </nav>
     <h1 id="titleHeaderText" class="d-flex">Rankedify</h1>
@@ -18,4 +19,4 @@
             for free.</div>
     </section>
     <script src="/js/aboutUs.js"></script>
-</body>
+</div>

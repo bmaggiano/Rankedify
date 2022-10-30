@@ -85,7 +85,7 @@
 .raise:focus {
     box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
     transform: translateY(-0.25em);
-    color: #ffa260
+    color: #ffffff
 }
 
 
@@ -95,7 +95,6 @@
 /*------------------------------Login Page------------------------------------ */
 #loginBody {
     background-image: url(../assets/images/R.jpg);
-    /* background-image: url(../assets/images/Sekiro3.png); */
     height: 1297px;
     background-position: center;
     background-repeat: no-repeat;
@@ -331,22 +330,36 @@ input:-ms-input-placeholder {
 
 #titleHeaderTextUserInp {
     padding-top: 30px;
-    color: rgb(0, 0, 0);
+    color: #ffffff;
     font-size: 56px;
     justify-content: center;
 }
 
-#signupPageNavBTN {
+#userInpNavBTN {
     justify-content: flex-end;
     margin: 10px 10px;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 22px;
-
 }
 
 #userInpNavBar {
     justify-content: flex-end;
+}
+
+#userInpTextDescription1 {
+    text-shadow: 2px 2px rgb(108, 108, 108);
+    padding-top: 5%;
+    text-align: center;
+    color: white;
+    font-size: 45px;
+}
+
+#userInpNavBTN:hover,
+#userInpNavBTN:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    color: rgb(0, 0, 0);
 }
 
 
