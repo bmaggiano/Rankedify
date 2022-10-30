@@ -96,6 +96,15 @@ router.get('/userinput', async (req, res) => {
     }
 });
 
+router.get('/aboutus', async (req, res) => {
+    try {
+        res.render('aboutUs')
+
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 
 
 
