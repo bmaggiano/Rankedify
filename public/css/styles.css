@@ -70,13 +70,13 @@
     justify-content: flex-end;
 }
 
-#navBTN-Homepage {
+.navBTN-Homepage {
     margin: 10px 10px;
     color: white;
     font-size: 22px;
 }
 
-#navBTN-Homepage:hover {
+.navBTN-Homepage:hover {
     color: black;
 
 }
