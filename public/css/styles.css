@@ -330,6 +330,7 @@ input:-ms-input-placeholder {
 
 #titleHeaderTextUserInp {
     padding-top: 30px;
+    text-shadow: 2px 2px rgb(108, 108, 108);
     color: #ffffff;
     font-size: 56px;
     justify-content: center;
@@ -374,7 +375,7 @@ input:-ms-input-placeholder {
     100% {
         opacity: 1;
     }
-} 
+}
 
 /*-------------------------- About Us Page---------------------------------- */
 .mainContainer {
@@ -392,6 +393,7 @@ input:-ms-input-placeholder {
     justify-content: center;
     padding-left: 10px;
 }
+
 /* #btn64-submit {
     margin-top: 10;
 }
