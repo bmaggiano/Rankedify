@@ -1,31 +1,36 @@
-<nav class="d-flex p-2" id="loginPageNavBTN">
-    <button type="button" id="loginPageNavBTN" class=" btn btn-outline-dark"><a href="/"
-            id="loginPageNavBTN">Home</a></button>
-    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark">My list</a>
+<nav class="d-flex p-2" id="loginNavBar">
+    <a type="button" id="loginPageNavBTN" class=" btn btn-outline-dark" href="/" id="HomeBTN">Home</a>
+    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark" href="/list/:id">My list</a>
     <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark">About us</a>
 </nav>
 <h1 id="titleHeaderTextLogin" class="d-flex">Rankedify</h1>
 
+<p id="loginDescription1">Log In below</p>
+<p id="loginDescription2">Don't have an account? Register <span id="signupSpan"><a type="button" id="HERE-BTN"
+            href="/signup">HERE</a></span></p>
+
 <body id="loginBody">
-    </nav>
-    <div id='loginArea' class=>
+    <div id='loginArea'>
         <div id="logInForm" class="col-12">
-            <h2 id="loginText">Log in</h2>
-            <form>
+
+
+            <form class="login-form">
                 <div>
-                    <input type="email" id="email-login" class="form-control" placeholder="Enter Valid Email" />
+                    <p style="text-align: center; color:white; font-size: 24px;">Username</p>
+                    <input type="text" id="userName-login" class="form-control" placeholder="Enter Valid Username" />
                 </div>
                 <div>
+                    <p style="text-align: center; color:white; font-size: 24px;">Password</p>
                     <input type="password" id="password-login" class="form-control"
                         placeholder="Enter Valid Password" />
                 </div>
                 <div>
-                    <button type="submit" id="logInBTN">LOG IN</button>
+                    <button type="submit" type="button" class="btn btn-outline-light" id="logInBTN">LOG IN</button>
                 </div>
             </form>
         </div>
         <div>
         </div>
 
-        <script src="../public/js/login.js"></script>
 </body>
+<script src="/js/login.js"></script>

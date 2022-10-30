@@ -1,14 +1,14 @@
 <body id="homepageBody">
     <nav class="d-flex p-2" id="homepage-nav">
         {{#if loggedIn}}
-        <button type="button" id="navBTN-Homepage" class="btn btn-outline-light">Log out</button>
+        <button type="button" id="navBTN-Homepage" class="btn btn-outline-light raise">Log out</button>
         {{else}}
-        <button type="button" id="navBTN-Homepage" class=" btn btn-outline-light"><a href="/login"
+        <button type="button" id="navBTN-Homepage" class=" btn btn-outline-light raise"><a href="/login"
                 id="loginInNavBTN">Log
                 in</a></button>
         {{/if}}
-        <a type="button" id="navBTN-Homepage" class="btn btn-outline-light">My list</a>
-        <a type="button" id="navBTN-Homepage" class="btn btn-outline-light">About us</a>
+        <a type="button" id="navBTN-Homepage" class="btn btn-outline-light raise" href="/list/:id">My list</a>
+        <a type="button" id="navBTN-Homepage" class="btn btn-outline-light raise">About us</a>
     </nav>
     <h1 id="titleHeaderText" class="d-flex">Rankedify</h1>
     <section id="titleHeader" class="">

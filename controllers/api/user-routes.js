@@ -22,7 +22,7 @@ router.post('/signup', async (req, res) => {
   }
 });
 
-//Login for the user
+// Login for the user
 router.post('/login', async (req, res) => {
   try {
     const dbUserData = await User.findOne({

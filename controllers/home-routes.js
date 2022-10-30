@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const Usergames = require('../models/Usergames');
-const Games = require('../models/Games');
+const { Usergames, Games, User } = require('../models/');
+const seedGames = require('../seed/gameSeeds');
 
 router.get('/', async (req, res) => {
     try {
@@ -10,6 +10,7 @@ router.get('/', async (req, res) => {
     }
 });
 
+
 router.get('/login', async (req, res) => {
     try {
         res.render('login')
@@ -18,17 +19,23 @@ router.get('/login', async (req, res) => {
     }
 });
 
+
+//incomplete, need to change this res.render to actual handlebars
 router.get('/list', async (req, res) => {
     try {
-        const listData = await Usergames.findAll({
-            include: [{model: Games, through: Usergames}]
+        const listData = await User.findAll({
+            include: [{ model: Games, through: Usergames }]
         });
 
         if (!listData) {
             res.status(404).json({ message: 'No games found with that id!' });
-            return;  
+            return;
         }
+        const list = await listData.map((listItem) => listItem.get({ plain: true }))
+
         res.status(200).json(listData)
+
+
     } catch (err) {
         console.error(err)
         res.status(500).json(err)
@@ -37,9 +44,30 @@ router.get('/list', async (req, res) => {
 
 router.get('/list/:id', async (req, res) => {
     try {
+        const listData = await User.findByPk(req.params.id, {
+            include: [
+                {
+                    model: Games,
+                    through: Usergames,
+                    attributes: ["game_name"]
+                }],
+        });
+        if (!listData) {
+            res.status(404).json({ message: 'No list associated with this user!' });
+            return;
+        }
 
-    } catch {
+        const list = listData.get({ plain: true });
 
+
+        res.render('userProfile', {
+            list,
+            logged_in: req.session.logged_in,
+        })
+
+    } catch (err) {
+        console.error(err)
+        res.status(500).json(err)
     }
 });
 
@@ -57,6 +85,14 @@ router.get('/master', async (req, res) => {
 
     } catch {
 
+    }
+});
+
+router.get('/userinput', async (req, res) => {
+    try {
+        res.render('userListInput')
+    } catch (err) {
+        res.status(500).json(err)
     }
 });
 
