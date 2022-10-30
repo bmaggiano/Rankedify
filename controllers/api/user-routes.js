@@ -14,7 +14,9 @@ router.post('/signup', async (req, res) => {
       req.session.loggedIn = true;
       req.session.user_id = dbUserData.id;
 
-      res.render('userProfile')
+      res.render('userListInput', {
+        dbUserData,
+      })
     });
   } catch (err) {
     console.error(err)
@@ -32,9 +34,7 @@ router.post('/login', async (req, res) => {
     });
 
     if (!dbUserData) {
-      res
-        .status(400)
-        .json({ message: 'Incorrect username or password. Please try again!' });
+      window.alert('Incorrect username or password. Please try again!');
       return;
     }
 
@@ -51,8 +51,9 @@ router.post('/login', async (req, res) => {
       req.session.loggedIn = true;
       req.session.user_id = dbUserData.id;
 
-      res
-        .status(200).json({ user: dbUserData, message: 'You are now logged in!' });
+      res.render('userProfile', {
+        dbUserData,
+      })
     });
   } catch (err) {
     res.status(500).json(err);
