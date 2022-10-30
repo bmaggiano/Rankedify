@@ -1,7 +1,9 @@
 <div id="homepageBody">
     <nav class="d-flex p-2" id="homepage-nav">
         {{#if loggedIn}}
-        <button type="button" id="navBTN-Homepage" class="btn btn-outline-light navBTN-Homepage">Log out</button>
+        <button type="button" id="navBTN-Homepage" class="btn btn-outline-light navBTN-Homepage"><a href="/"
+                id="logoutNavBTN">Log
+                Out</a></button>
         {{else}}
         <button type="button" id="navBTN-Homepage" class=" btn btn-outline-light navBTN-Homepage"><a href="/login"
                 id="loginInNavBTN">Log
@@ -19,4 +21,7 @@
             for free.</div>
     </section>
     <script src="/js/aboutUs.js"></script>
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </div>

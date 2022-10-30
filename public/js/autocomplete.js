@@ -408,7 +408,7 @@ var inputThree = document.getElementById("input-three");
 var inputFour = document.getElementById("input-four");
 var inputFive = document.getElementById("input-five");
 
-const autocompleteArr = function autocompleteArr() {
+// const autocompleteArr = function autocompleteArr() {
 
     let listArr = []
     
@@ -490,8 +490,8 @@ autocomplete({
         console.log(listArr)
     }
 });
-}
+// }
 
-autocompleteArr();
+// autocompleteArr();
 
-module.exports = autocompleteArr
+// module.exports = autocompleteArr

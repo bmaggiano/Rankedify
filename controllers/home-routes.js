@@ -6,7 +6,9 @@ const withAuth = require('../utils/auth')
 
 router.get('/', async (req, res) => {
     try {
-        res.render('homepage')
+        res.render('homepage', {
+            loggedIn: req.session.loggedIn
+        })
     } catch {
         res.status(500).json(err);
     }
@@ -37,7 +39,8 @@ router.get('/list', withAuth, async (req, res) => {
 
         // res.status(200).json(listData)
         res.render('userProfile', {
-            list
+            list,
+            loggedIn: req.session.loggedIn
         })
 
 
@@ -67,7 +70,7 @@ router.get('/list/:id', withAuth, async (req, res) => {
 
         res.render('userProfile', {
             list,
-            logged_in: req.session.logged_in,
+            loggedIn: req.session.loggedIn,
         })
 
     } catch (err) {
@@ -95,7 +98,9 @@ router.get('/master', async (req, res) => {
 
 router.get('/userinput', async (req, res) => {
     try {
-        res.render('userListInput')
+        res.render('userListInput', {
+            loggedIn: req.session.loggedIn
+        })
     } catch (err) {
         res.status(500).json(err)
     }
@@ -103,7 +108,9 @@ router.get('/userinput', async (req, res) => {
 
 router.get('/aboutus', async (req, res) => {
     try {
-        res.render('aboutUs')
+        res.render('aboutUs', {
+            loggedIn: req.session.loggedIn
+        })
     } catch (err) {
         res.status(500).json(err);
     }
