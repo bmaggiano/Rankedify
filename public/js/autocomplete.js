@@ -407,6 +407,8 @@ var inputThree = document.getElementById("input-three");
 var inputFour = document.getElementById("input-four");
 var inputFive = document.getElementById("input-five");
 
+let listArr = []
+
 autocomplete({
     input: inputOne,
     fetch: function(text, update) {
@@ -417,6 +419,8 @@ autocomplete({
     },
     onSelect: function(item) {
         input.value = item.label;
+        const resultOne = item.value;
+        listArr.push(resultOne)
     }
 });
 
@@ -430,6 +434,9 @@ autocomplete({
     },
     onSelect: function(item) {
         input.value = item.label;
+        const resultTwo = item.value;
+        listArr.push(resultTwo)
+
     }
 });
 
@@ -443,6 +450,9 @@ autocomplete({
     },
     onSelect: function(item) {
         input.value = item.label;
+        const resultThree = item.value;
+        listArr.push(resultThree)
+
     }
 });
 
@@ -456,6 +466,9 @@ autocomplete({
     },
     onSelect: function(item) {
         input.value = item.label;
+        const resultFour = item.value;
+        listArr.push(resultFour)
+
     }
 });
 
@@ -469,5 +482,8 @@ autocomplete({
     },
     onSelect: function(item) {
         input.value = item.label;
+        const resultFive = item.value;
+        listArr.push(resultFive)
+
     }
 });
