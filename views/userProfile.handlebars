@@ -1,13 +1,23 @@
-<body>
+<nav class="d-flex p-2" id="loginNavBar">
+    <a type="button" id="loginPageNavBTN" class=" btn btn-outline-dark" href="/" id="HomeBTN">Home</a>
+    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark" href="/list/:id">My list</a>
+    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark">About us</a>
+</nav>
+<h1 id="titleHeaderTextLogin" class="d-flex">Rankedify</h1>
+
+<div>
     <section class="profile">
         <div class="profile-picture"></div>
         <div class="userame-title">
             <h2></h2>
         </div>
-        {{#each list.games.[].game_name}}
-        {{/each}}
+        <ul>
+            {{#each list.games.[].game_name}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
 
     </section>
 
     <script src="/js/login.js"></script>
-</body>
+</div>
