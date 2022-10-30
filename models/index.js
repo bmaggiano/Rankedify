@@ -14,17 +14,6 @@ Games.belongsToMany(User, {
   unique: false},
 });
 
-<<<<<<< HEAD
-// Games.belongsToMany(User, {
-//   through: Usergames,
-//   foreignKey: 'user_id',
-// });
-
-// User.belongsToMany(Games, {
-//   through: Usergames,
-//   foreignKey: 'game_id',
-// });
-=======
 
 // User.hasMany(Games, {
 //   through: Usergames,
@@ -36,7 +25,6 @@ Games.belongsToMany(User, {
 //   foreignKey: 'user_id',
 // });
 
->>>>>>> 7c367824fa120b021914dd68ca5ffdbbd14420c1
 
 module.exports = {
   // Comments,  
