@@ -38,13 +38,6 @@ UserInput.init(
               key: "id"
             }
           },
-          game_id: {
-            type: DataTypes.INTEGER,
-            references: {
-              model: "game",
-              key: "id"
-            },
-          },
     },
     {
         sequelize,
