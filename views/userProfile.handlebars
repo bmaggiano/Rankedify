@@ -1,7 +1,12 @@
 <nav class="d-flex p-2" id="loginNavBar">
     <a type="button" id="loginPageNavBTN" class=" btn btn-outline-dark" href="/" id="HomeBTN">Home</a>
-    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark" href="/list/:id">My list</a>
-    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark">About us</a>
+            {{#if loggedIn}}
+        <button type="button" id="loginPageNavBTN" class="btn btn-outline-dark"><a href="/"
+                id="logoutNavBTN">Log
+                Out</a></button>
+                {{/if}}
+    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark" href="/list/">Users Picks</a>
+    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark" href="/aboutus">About Us</a>
 </nav>
 <h1 id="titleHeaderTextLogin" class="d-flex">Rankedify</h1>
 
@@ -9,21 +14,27 @@
     <section class="profile">
         <div class="profile-picture"></div>
         <div class="userame-title">
+            {{#if list.user_input}}
             <h2>{{list.username}}'s List</h2>
+            {{/if}}
         </div>
         <ul>
 
             {{#each list.user_input}}
             <li>{{this}}</li>
             {{/each}}
-            {{!-- {{list.user_input.game_input_one}}
-            {{list.user_input.game_input_two}}
-            {{list.user_input.game_input_three}}
-            {{list.user_input.game_input_four}}
-            {{list.user_input.game_input_five}} --}}
+
         </ul>
-
+        {{#if list.user_input}}
+    <button id="deleteList" class="btn btn-outline-dark">Delete Your List</button>
+        {{else}}
+    <a type="button" id="createList" class="btn btn-outline-dark" href="/userinput">Click here to create a list</a>
+        {{/if}}
     </section>
-
+    {{#if loggedIn}}
+    <script src="/js/mylist.js"></script>
+    <script src="/js/logout.js"></script>
+    {{/if}}
     <script src="/js/login.js"></script>
+    <script src="/js/delete.js"></script>
 </div>

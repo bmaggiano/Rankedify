@@ -1,5 +1,6 @@
 <div class="mainContainer">
 <nav class="  text-white  p-50 d-flex p-2" id="homepage-nav">
+        <a type="button" id="navBTN-Homepage" class="btn btn-outline-light raise navBTN-Homepage" href="/">Home</a>
         {{#if loggedIn}}
         <button type="button" id="navBTN-Homepage" class="btn btn-outline-light raise navBTN-Homepage">Log out</button>
         {{else}}
@@ -53,4 +54,10 @@
         </div>
     </div>
 
+    {{#if loggedIn}}
+    <script src="/js/mylist.js"></script>
+    <script src="/js/logout.js"></script>
+    {{/if}}
+    <script src="/js/login.js"></script>
+    
     </body>

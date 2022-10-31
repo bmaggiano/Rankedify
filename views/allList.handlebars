@@ -1,7 +1,12 @@
 <nav class="d-flex p-2" id="loginNavBar">
     <a type="button" id="loginPageNavBTN" class=" btn btn-outline-dark" href="/" id="HomeBTN">Home</a>
+                {{#if loggedIn}}
+        <button type="button" id="loginPageNavBTN" class="btn btn-outline-dark"><a href="/"
+                id="logoutNavBTN">Log
+                Out</a></button>
+                {{/if}}
     <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark" href="/list/:id">My list</a>
-    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark">About us</a>
+    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark" href="/aboutus">About us</a>
 </nav>
 <h1 id="titleHeaderTextLogin" class="d-flex">Rankedify</h1>
 
@@ -12,7 +17,7 @@
             <h2>Check out everyone's top 5 list!</h2>
         </div>
 {{#each list}}
-<div class="card" style="width: 18rem;">
+<div class="card row" style="width: 18rem;">
   <div class="card-header">
     {{this.username}}'s Top 5 List!
   </div>
@@ -28,5 +33,9 @@
 
     </section>
 
+    {{#if loggedIn}}
+    <script src="/js/mylist.js"></script>
+    <script src="/js/logout.js"></script>
+    {{/if}}
     <script src="/js/login.js"></script>
 </div>
