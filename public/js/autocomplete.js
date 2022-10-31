@@ -407,8 +407,12 @@ var inputThree = document.getElementById("input-three");
 var inputFour = document.getElementById("input-four");
 var inputFive = document.getElementById("input-five");
 
+
+// const autocompleteArr = function autocompleteArr() {
+
 let listArr = []
-    
+
+
 autocomplete({
     input: inputOne,
     fetch: function (text, update) {
