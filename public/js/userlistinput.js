@@ -16,7 +16,6 @@ const userSumbit = document.getElementById("submitBtn")
     const game_input_three = userInputThree.value.trim();
     const game_input_four = userInputFour.value.trim();
     const game_input_five = userInputFive.value.trim();
-    // alert(game_input_one)
     if (game_input_one && game_input_two && game_input_three && game_input_four && game_input_five) {
       const response = await fetch('/api/userInput', {
           method: 'POST',
