@@ -21,5 +21,4 @@ const signupFormHandler = async (event) => {
 };
 
 const submitBtn = document.getElementById('signInBTN');
-
-    submitBtn.addEventListener('click', signupFormHandler);
+submitBtn.addEventListener('click', signupFormHandler);
