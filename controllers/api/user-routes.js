@@ -11,11 +11,14 @@ router.post('/signup', async (req, res) => {
     });
 
     req.session.save(() => {
+      req.session.username = dbUserData.username;
       req.session.loggedIn = true;
       req.session.user_id = dbUserData.id;
 
       res.render('userListInput', {
-        dbUserData,
+        user_id: req.session.user_id,
+        loggedIn: req.session.loggedIn,
+        username: req.session.username
       })
     });
   } catch (err) {
@@ -48,12 +51,14 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
       req.session.loggedIn = true;
+      req.session.user_id = dbUserData.id;
 
       res.render('homepage', {
-        dbUserData,
-        loggedIn: req.session.loggedIn
+        username: req.session.username,
+        loggedIn: req.session.loggedIn,
+        user_id: req.session.user_id
       })
     });
   } catch (err) {
