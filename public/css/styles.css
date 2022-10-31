@@ -449,6 +449,13 @@ input:-ms-input-placeholder {
     padding-left: 10px;
 }
 
+/*-------------------------- Master List---------------------------------- */
+
+.mainListContainer {
+    background-image: url(centeredsquare1.webp);
+    background-position: center;
+};
+
 /* #btn64-submit {
     margin-top: 10;
 }
