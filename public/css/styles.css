@@ -14,6 +14,36 @@
     background-size: cover;
 }
 
+#loginBody {
+    background-image: url(../assets/images/Sekiro3.png);
+    height: 1297px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#signupBody {
+    background-image: url(../assets/images/Elden\ Ring.png);
+    height: 1297px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#profileBody {
+    background-image: url(../assets/images/Stardew\ Valley.png);
+    height: 1297px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#titleHeader {
+    justify-content: center;
+    text-align: center;
+
+}
+
 #titleHeaderText {
     padding-top: 30px;
     color: white;
@@ -321,7 +351,7 @@ input:-ms-input-placeholder {
 
 /*-------------------------- User Input Page---------------------------------- */
 #userInpBody {
-    background-image: url(../assets/images/artwork-the-witcher-3-wild-hunt-hd.jpg);
+    background-image: url(../assets/images/World\ of\ Warcraft.png);
     height: 1297px;
     background-position: center;
     background-repeat: no-repeat;
@@ -330,6 +360,7 @@ input:-ms-input-placeholder {
 
 #titleHeaderTextUserInp {
     padding-top: 30px;
+    text-shadow: 2px 2px rgb(108, 108, 108);
     color: #ffffff;
     font-size: 56px;
     justify-content: center;
@@ -365,6 +396,31 @@ input:-ms-input-placeholder {
 
 /*-------------------------- User Input Page---------------------------------- */
 
+/*------------------------------------ User Profile ----------------------------------------*/
+
+#titleHeaderTextLogin {
+    color: #ffffff;
+}
+
+.container {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    width: 10em;
+}
+
+#span {
+    box-shadow: -11px 9px 1px #3cb68f;
+    background-color: black;
+    border-radius: 16px;
+}
+
+/*------------------------------------ User Profile ----------------------------------------*/
+
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
@@ -374,7 +430,7 @@ input:-ms-input-placeholder {
     100% {
         opacity: 1;
     }
-} 
+}
 
 /*-------------------------- About Us Page---------------------------------- */
 .mainContainer {
@@ -392,6 +448,7 @@ input:-ms-input-placeholder {
     justify-content: center;
     padding-left: 10px;
 }
+
 /* #btn64-submit {
     margin-top: 10;
 }
