@@ -14,8 +14,10 @@ router.post('/signup', async (req, res) => {
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
       req.session.user_id = dbUserData.id;
+      req.session.user_input = dbUserData.user_input
 
       res.render('userListInput', {
+        user_input: req.session.user_input,
         user_id: req.session.user_id,
         loggedIn: req.session.loggedIn,
         username: req.session.username
@@ -54,9 +56,11 @@ router.post('/login', async (req, res) => {
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
       req.session.user_id = dbUserData.id;
+      req.session.user_input = dbUserData.user_input
 
       res.render('homepage', {
         username: req.session.username,
+        user_input: req.session.user_input,
         loggedIn: req.session.loggedIn,
         user_id: req.session.user_id
       })

@@ -9,7 +9,9 @@
     <section class="profile">
         <div class="profile-picture"></div>
         <div class="userame-title">
+            {{#if list.user_input}}
             <h2>{{list.username}}'s List</h2>
+            {{/if}}
         </div>
         <ul>
 
@@ -22,8 +24,13 @@
             {{list.user_input.game_input_four}}
             {{list.user_input.game_input_five}} --}}
         </ul>
-
+        {{#if list.user_input}}
+    <button id="deleteList" class="btn btn-outline-dark">Delete Your List</button>
+        {{else}}
+    <a type="button" id="createList" class="btn btn-outline-dark" href="/userinput">Click here to create a list</a>
+        {{/if}}
     </section>
 
     <script src="/js/login.js"></script>
+    <script src="/js/delete.js"></script>
 </div>
