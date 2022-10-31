@@ -52,7 +52,7 @@ router.get('/list', withAuth, async (req, res) => {
 
 router.get('/list/:id', withAuth, async (req, res) => {
     try {
-        const listData = await User.findByPk(req.params.id, {
+        const listData = await User.findByPk(req.session.user_id, {
             include: [
                 {
                     model: Games,
@@ -66,10 +66,12 @@ router.get('/list/:id', withAuth, async (req, res) => {
         }
 
         const list = listData.get({ plain: true });
+        const username = listData.get({ plain: true });
 
 
         res.render('userProfile', {
             list,
+            username,
             loggedIn: req.session.loggedIn,
         })
 

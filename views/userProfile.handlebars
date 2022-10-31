@@ -9,16 +9,12 @@
     <section class="profile">
         <div class="profile-picture"></div>
         <div class="userame-title">
-            <h2></h2>
+            <h2>{{username.username}}'s List</h2>
         </div>
         <ul>
-            {{#each list.games.[i].game_name}}
-            <li>{{this}}</li>
+            {{#each list.games}}
+            <li>{{game_name}}</li>
             {{/each}}
-            {{list.games.[1].game_name}}
-            {{list.games.[2].game_name}}
-            {{list.games.[3].game_name}}
-            {{list.games.[4].game_name}}
         </ul>
 
     </section>
