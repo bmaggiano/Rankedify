@@ -32,7 +32,7 @@ router.post('/comments', async (req, res) => {
             username: req.body.username
         }); 
 
-        const comments = commentData.map((gallery) =>
+        const userComments = commentData.map((gallery) =>
         gallery.get({ plain: true })
       );
 
