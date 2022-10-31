@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { Usergames, Games, User } = require('../models/');
 const UserInput = require('../models/userInput');
 const seedGames = require('../seed/gameSeeds');
-// const withAuth = require('../utils/auth');
 const withAuth = require('../utils/auth')
 
 router.get('/', async (req, res) => {
@@ -14,7 +13,6 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
     }
 });
-
 
 router.get('/login', async (req, res) => {
     try {
@@ -117,11 +115,5 @@ router.get('/aboutus', async (req, res) => {
         res.status(500).json(err);
     }
 });
-
-
-
-
-
-
 
 module.exports = router;

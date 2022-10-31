@@ -408,15 +408,12 @@ var inputThree = document.getElementById("input-three");
 var inputFour = document.getElementById("input-four");
 var inputFive = document.getElementById("input-five");
 
-// const autocompleteArr = function autocompleteArr() {
-
-    let listArr = []
+let listArr = []
     
 autocomplete({
     input: inputOne,
     fetch: function (text, update) {
         text = text.toLowerCase();
-        // you can also use AJAX requests instead of preloaded data
         var suggestions = games.filter(n => n.label.toLowerCase().startsWith(text))
         update(suggestions);
     },
@@ -431,7 +428,6 @@ autocomplete({
     input: inputTwo,
     fetch: function (text, update) {
         text = text.toLowerCase();
-        // you can also use AJAX requests instead of preloaded data
         var suggestions = games.filter(n => n.label.toLowerCase().startsWith(text))
         update(suggestions);
     },
@@ -447,7 +443,6 @@ autocomplete({
     input: inputThree,
     fetch: function (text, update) {
         text = text.toLowerCase();
-        // you can also use AJAX requests instead of preloaded data
         var suggestions = games.filter(n => n.label.toLowerCase().startsWith(text))
         update(suggestions);
     },
@@ -463,7 +458,6 @@ autocomplete({
     input: inputFour,
     fetch: function (text, update) {
         text = text.toLowerCase();
-        // you can also use AJAX requests instead of preloaded data
         var suggestions = games.filter(n => n.label.toLowerCase().startsWith(text))
         update(suggestions);
     },
@@ -479,7 +473,6 @@ autocomplete({
     input: inputFive,
     fetch: function (text, update) {
         text = text.toLowerCase();
-        // you can also use AJAX requests instead of preloaded data
         var suggestions = games.filter(n => n.label.toLowerCase().startsWith(text))
         update(suggestions);
     },
@@ -490,8 +483,6 @@ autocomplete({
         console.log(listArr)
     }
 });
-// }
 
-// autocompleteArr();
 
-// module.exports = autocompleteArr
+
