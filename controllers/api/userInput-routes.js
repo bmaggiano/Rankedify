@@ -13,6 +13,7 @@ router.post('/', async (req, res) =>{
             game_input_four: req.body.game_input_four,
             game_input_five: req.body.game_input_five
         })
+        console.log(userInputData)
         res.status(200).json(updateList);
     } catch(err) {
         res.status(500).json(err);
