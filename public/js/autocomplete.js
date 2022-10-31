@@ -132,7 +132,6 @@ var games = [
     {label: 'Shadow of the Tomb Raider', value: 131},
     {label: 'Saints Row IV', value: 132},
     {label: 'INSIDE', value: 133},
-    { label: 'INSIDE', value: 133 },
     { label: 'Alien: Isolation', value: 134 },
     { label: 'Middle-earth: Shadow of War', value: 135 },
     { label: "Assassin's Creed Odyssey", value: 136 },
