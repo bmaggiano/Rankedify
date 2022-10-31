@@ -9,11 +9,11 @@
     <section class="profile">
         <div class="profile-picture"></div>
         <div class="userame-title">
-            <h2></h2>
+            <h2>{{username.username}}'s List</h2>
         </div>
         <ul>
-            {{#each list.games.[].game_name}}
-            <li>{{this}}</li>
+            {{#each list.games}}
+            <li>{{game_name}}</li>
             {{/each}}
         </ul>
 
