@@ -351,7 +351,7 @@ input:-ms-input-placeholder {
 
 /*-------------------------- User Input Page---------------------------------- */
 #userInpBody {
-    background-image: url(../assets/images/artwork-the-witcher-3-wild-hunt-hd.jpg);
+    background-image: url(../assets/images/World\ of\ Warcraft.png);
     height: 1297px;
     background-position: center;
     background-repeat: no-repeat;
@@ -395,6 +395,31 @@ input:-ms-input-placeholder {
 
 
 /*-------------------------- User Input Page---------------------------------- */
+
+/*------------------------------------ User Profile ----------------------------------------*/
+
+#titleHeaderTextLogin {
+    color: #ffffff;
+}
+
+.container {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    width: 10em;
+}
+
+#span {
+    box-shadow: -11px 9px 1px #3cb68f;
+    background-color: black;
+    border-radius: 16px;
+}
+
+/*------------------------------------ User Profile ----------------------------------------*/
 
 @keyframes fadeInAnimation {
     0% {
