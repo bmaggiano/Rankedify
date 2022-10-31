@@ -17,21 +17,20 @@ const urls = [apiUrlPage1, apiUrlPage2, apiUrlPage3, apiUrlPage4, apiUrlPage5, a
 
 const blankArr = []
 const gamesArr = []
-// console.log(apiUrlPage1)
+
 const seedGames = async () => {
     const arrayOfResponses = await Promise.all(
         urls.map((url) =>
             axios.get(url)
         )
     );
-// console.log(arrayOfResponses)
-blankArr.push(...arrayOfResponses[0].data.results, ...arrayOfResponses[1].data.results, ...arrayOfResponses[2].data.results, ...arrayOfResponses[3].data.results, ...arrayOfResponses[4].data.results, ...arrayOfResponses[5].data.results, ...arrayOfResponses[6].data.results, ...arrayOfResponses[7].data.results, ...arrayOfResponses[8].data.results, ...arrayOfResponses[9].data.results)
-// console.log(blankArr);
+
+    blankArr.push(...arrayOfResponses[0].data.results, ...arrayOfResponses[1].data.results, ...arrayOfResponses[2].data.results, ...arrayOfResponses[3].data.results, ...arrayOfResponses[4].data.results, ...arrayOfResponses[5].data.results, ...arrayOfResponses[6].data.results, ...arrayOfResponses[7].data.results, ...arrayOfResponses[8].data.results, ...arrayOfResponses[9].data.results)
+
 for (let i=0; i<blankArr.length; i++) {
     const name = {game_name: `${blankArr[i].name}`};
     gamesArr.push(name);
 }
-// console.log(gamesArr)
 return await gamesArr;
 };
 

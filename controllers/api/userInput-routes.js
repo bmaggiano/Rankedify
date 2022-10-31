@@ -1,6 +1,4 @@
-const { Usergames } = require('../../models/');
 const UserInput = require('../../models/userInput');
-// const autocompleteArr = require('../../js/autocomplete')
 const router = require('express').Router();
 
 router.post('/', async (req, res) =>{

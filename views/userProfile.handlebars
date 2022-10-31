@@ -1,9 +1,13 @@
 <div id="profileBody">
     <nav class="d-flex p-2" id="loginNavBar">
     <a type="button" id="loginPageNavBTN" class=" btn btn-outline-dark" href="/" id="HomeBTN" style="background: linear-gradient(45deg, red, blue); color: white">Home</a>
-    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark" href="/list/:id" style="background: linear-gradient(45deg, red, blue); color: white">My list</a>
     <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark" style="background: linear-gradient(45deg, red, blue); color: white">About us</a>
     <button type="button" id="nav-btn-aboutus" class="btn btn-outline-light raise navBTN-Homepage"><a href="/toppicks">Top Picks</a></button>
+    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark" href="/list" style="background: linear-gradient(45deg, red, blue); color: white">Users Picks</a>
+    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark" href="/aboutus" style="background: linear-gradient(45deg, red, blue); color: white">About us</a>
+    {{#if loggedIn}}
+    <button type="button" id="loginPageNavBTN" class="btn btn-outline-dark" style="background: linear-gradient(45deg, red, blue); color: white">Log out</button>
+    {{/if}}
     </nav>
     <h1 id="titleHeaderTextLogin" class="d-flex">
         <span id="span">
@@ -19,27 +23,34 @@
                 <div class="card-header">
                     <div class="username-title">
                         <h2>
-                            <b>{{username.username}}'s List</b>
+                            {{#if list.user_input}}
+                            <b>{{list.username}}'s List</b>
+                            {{/if}}
                         </h2>
                     </div>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item" style="background-color: rgb(144, 1, 152); color: white; text-shadow">
-                        1. {{list.user_inputs.[0].game_input_one}}
+                        1. {{list.user_input.game_input_one}}
                     </li>
                     <li class="list-group-item" style="background-color: rgb(152, 92, 1); color: white">
-                        2. {{list.user_inputs.[0].game_input_two}}
+                        2. {{list.user_input.game_input_two}}
                     </li>
                     <li class="list-group-item" style="background-color: rgb(10, 102, 16); color: white">
-                        3. {{list.user_inputs.[0].game_input_three}}
+                        3. {{list.user_input.game_input_three}}
                     </li>
                     <li class="list-group-item" style="background-color: rgb(25, 0, 255); color: white">
-                        4. {{list.user_inputs.[0].game_input_four}}
+                        4. {{list.user_input.game_input_four}}
                     </li>
                     <li class="list-group-item" style="background-color: rgb(35, 186, 240); color: white">
-                        5. {{list.user_inputs.[0].game_input_five}}
+                        5. {{list.user_input.game_input_five}}
                     </li>
                 </ul>
+    {{#if list.user_input}}
+    <button id="deleteList" class="btn btn-light btn-outline-dark">Delete Your List</button>
+    {{else}}
+    <a type="button" id="createList" class="btn btn-outline-dark" href="/userinput">Click here to create a list</a>
+    {{/if}}
             </div>
         </div>
 
