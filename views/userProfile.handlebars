@@ -1,35 +1,47 @@
-<nav class="d-flex p-2" id="loginNavBar">
-    <a type="button" id="loginPageNavBTN" class=" btn btn-outline-dark" href="/" id="HomeBTN">Home</a>
-            {{#if loggedIn}}
-        <button type="button" id="loginPageNavBTN" class="btn btn-outline-dark"><a href="/"
-                id="logoutNavBTN">Log
-                Out</a></button>
-                {{/if}}
-    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark" href="/list/">Users Picks</a>
-    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark" href="/aboutus">About Us</a>
-</nav>
-<h1 id="titleHeaderTextLogin" class="d-flex">Rankedify</h1>
-
-<div>
+<div id="profileBody">
+    <nav class="d-flex p-2" id="loginNavBar">
+    <a type="button" id="loginPageNavBTN" class=" btn btn-outline-dark" href="/" id="HomeBTN" style="background: linear-gradient(45deg, red, blue); color: white">Home</a>
+    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark" href="/list/:id" style="background: linear-gradient(45deg, red, blue); color: white">My list</a>
+    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark" style="background: linear-gradient(45deg, red, blue); color: white">About us</a>
+    </nav>
+    <h1 id="titleHeaderTextLogin" class="d-flex">
+        <span id="span">
+            Rankedify
+        </span>
+    </h1>
     <section class="profile">
         <div class="profile-picture"></div>
-        <div class="userame-title">
-            {{#if list.user_input}}
-            <h2>{{list.username}}'s List</h2>
-            {{/if}}
+
+
+        <div class="container">
+            <div class="card" id="item" style="width: 18rem; background: black; color: white">
+                <div class="card-header">
+                    <div class="username-title">
+                        <h2>
+                            <b>{{username.username}}'s List</b>
+                        </h2>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" style="background-color: rgb(144, 1, 152); color: white; text-shadow">
+                        1. {{list.user_inputs.[0].game_input_one}}
+                    </li>
+                    <li class="list-group-item" style="background-color: rgb(152, 92, 1); color: white">
+                        2. {{list.user_inputs.[0].game_input_two}}
+                    </li>
+                    <li class="list-group-item" style="background-color: rgb(10, 102, 16); color: white">
+                        3. {{list.user_inputs.[0].game_input_three}}
+                    </li>
+                    <li class="list-group-item" style="background-color: rgb(25, 0, 255); color: white">
+                        4. {{list.user_inputs.[0].game_input_four}}
+                    </li>
+                    <li class="list-group-item" style="background-color: rgb(35, 186, 240); color: white">
+                        5. {{list.user_inputs.[0].game_input_five}}
+                    </li>
+                </ul>
+            </div>
         </div>
-        <ul>
 
-            {{#each list.user_input}}
-            <li>{{this}}</li>
-            {{/each}}
-
-        </ul>
-        {{#if list.user_input}}
-    <button id="deleteList" class="btn btn-outline-dark">Delete Your List</button>
-        {{else}}
-    <a type="button" id="createList" class="btn btn-outline-dark" href="/userinput">Click here to create a list</a>
-        {{/if}}
     </section>
     {{#if loggedIn}}
     <script src="/js/mylist.js"></script>
