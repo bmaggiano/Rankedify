@@ -2,6 +2,7 @@
 const User = require("./User")
 const Games = require("./Games")
 const Usergames = require("./Usergames")
+const UserInput = require("./userInput")
 
 
 // Categories have many Products
@@ -13,6 +14,15 @@ Games.belongsToMany(User, {
   through: {model: Usergames,
   unique: false},
 });
+
+UserInput.belongsTo(User, {
+  foreignKey: "user_id"
+})
+
+User.hasMany(UserInput, {
+  foreignKey: "user_id",
+  onDelete: "CASCADE"
+})
 
 
 // User.hasMany(Games, {

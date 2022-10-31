@@ -3,9 +3,12 @@ const router = require('express').Router();
 const listRoutes = require('./list-routes');
 const userRoutes = require('./user-routes');
 const commentRoutes = require('./comment')
+const userInputRoutes = require('./userInput-routes')
 
-router.use('/api', listRoutes);
-router.use('/api', userRoutes);
-router.use('/api', commentRoutes);
+router.use('/lists', listRoutes);
+router.use('/users', userRoutes);
+router.use('/comments', commentRoutes);
+router.use('/userInput', userInputRoutes);
+
 
 module.exports = router;
