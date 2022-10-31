@@ -525,14 +525,14 @@
 .aboutProfilePic {
     justify-content: center;
     padding-left: 10px;
-
-
+}
 /*-------------------------- Master List---------------------------------- */
 
 .mainListContainer {
     background-image: url(centeredsquare1.webp);
+    background-image: url(/assets/images/centeredsquare1.webp);
     background-position: center;
-};
+}
 
 /* #btn64-submit {
     margin-top: 10;
