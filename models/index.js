@@ -19,7 +19,7 @@ UserInput.belongsTo(User, {
   foreignKey: "user_id"
 })
 
-User.hasMany(UserInput, {
+User.hasOne(UserInput, {
   foreignKey: "user_id",
   onDelete: "CASCADE"
 })
