@@ -1,5 +1,5 @@
-const Usergames = require('../../models/Usergames');
-
+const { Usergames } = require('../../models/');
+// const autocompleteArr = require('../../js/autocomplete')
 const router = require('express').Router();
 
 router.post('/list', async (req, res) => {
@@ -12,7 +12,15 @@ router.post('/list', async (req, res) => {
             })
             console.log(listData)
         }
-        res.status(200).json("Success")
+        // await autocompleteArr()
+        // .then(async data => {
+        //     console.log(data)
+        //     await Usergames.create({
+        //         user_id: req.session.user_id,
+        //         game_id: data
+        //     })
+        // })
+        console.log("Success")
     } catch (err) {
         console.error(err)
         res.status(500).json(err)

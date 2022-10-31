@@ -1,3 +1,11 @@
+#titleHeader {
+    justify-content: center;
+    text-align: center;
+
+}
+
+
+/* -----------------------------homepage-------------------------------------- */
 #homepageBody {
     background-image: url(../assets/images/alexey-savchenko-k4Akpt5-Sfk-unsplash.jpg);
     height: 1297px;
@@ -46,27 +54,6 @@
     justify-content: center;
 }
 
-#titleHeaderTextLogin {
-    padding-top: 30px;
-    color: rgb(0, 0, 0);
-    font-size: 56px;
-    animation: fadeInAnimation ease 5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    justify-content: center;
-}
-
-#titleHeaderTextSignup {
-    padding-top: 30px;
-    color: rgb(252, 252, 252);
-    font-size: 56px;
-    animation: fadeInAnimation ease 5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    justify-content: center;
-}
-
-
 #intro {
     opacity: 0;
     padding-top: 120px;
@@ -104,13 +91,186 @@
     color: white;
 }
 
-#loginPageNavBTN {
+#loginInNavBTN:hover {
+    color: black;
+
+}
+
+#homepage-nav {
     justify-content: flex-end;
+}
+
+.navBTN-Homepage {
     margin: 10px 10px;
+    color: white;
+    font-size: 22px;
+}
+
+.navBTN-Homepage:hover {
+    color: black;
+
+}
+
+.raise:hover,
+.raise:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    color: #ffffff
+}
+
+
+/* -----------------------------homepage-------------------------------------- */
+
+
+/*------------------------------Login Page------------------------------------ */
+#loginBody {
+    background-image: url(../assets/images/R.jpg);
+    height: 1297px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#titleHeaderTextLogin {
+    padding-top: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 56px;
+    justify-content: center;
+    padding-bottom: 90px;
+}
+
+#loginPageNavBTN {
+    margin: 0px 10px;
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-size: 22px;
 
+}
+
+#HomeBTN {
+    justify-content: flex-end;
+    margin: 0px 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+
+}
+
+#logInBTN {
+
+    margin-top: 5px;
+    margin-left: 47.8%;
+    font-size: 22px;
+}
+
+#loginNavBar {
+    justify-content: flex-end;
+}
+
+#loginPageNavBTN:hover,
+#loginPageNavBTN:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    color: white;
+}
+
+#HomeBTN:hover,
+#HomeBTN:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    color: white;
+}
+
+#loginText {
+    text-align: center;
+    color: rgb(23, 22, 22);
+    font-size: 60px;
+    padding-right: 25px;
+}
+
+#signupSpan {
+    color: red;
+    text-decoration: none;
+}
+
+#loginDescription1 {
+    text-align: center;
+    color: rgb(23, 22, 22);
+    font-size: 45px;
+    padding-right: 25px;
+    padding-top: 30px;
+}
+
+#loginDescription2 {
+    text-align: center;
+    color: rgb(23, 22, 22);
+    font-size: 45px;
+    padding-right: 25px;
+}
+
+#logInForm {
+    padding-top: 10%;
+    padding-right: 50px;
+}
+
+#userName-login {
+    color: black;
+    text-align: center;
+    margin-left: 40%;
+    width: 19%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+input::-webkit-input-placeholder {
+    color: rgb(255, 255, 255) !important;
+}
+
+input:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgb(255, 255, 255) !important;
+}
+
+input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgb(255, 255, 255) !important;
+}
+
+input:-ms-input-placeholder {
+    color: rgb(255, 255, 255) !important;
+}
+
+
+#password-login {
+    text-align: center;
+    margin-left: 40%;
+    width: 19%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#HERE-BTN {
+    text-decoration: none;
+    color: red;
+}
+
+/*------------------------------Login Page------------------------------------ */
+
+
+/*-----------------------------Signup Page------------------------------------ */
+#signupBody {
+    background-image: url(../assets/images/Elden\ Ring.png);
+    height: 1297px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#titleHeaderTextSignup {
+    padding-top: 30px;
+    color: rgb(252, 252, 252);
+    font-size: 56px;
+    justify-content: center;
 }
 
 #signupPageNavBTN {
@@ -122,104 +282,119 @@
 
 }
 
-
-
-#homepage-nav {
-    justify-content: flex-end;
-}
-
-#navBTN-Homepage {
-    margin: 10px 10px;
-    color: white;
-    font-size: 22px;
-}
-
-#email-login {
-    margin-bottom: 20px;
-    margin-top: 20px;
-
-}
-
-
-#logInBTN {
-    opacity: 0;
-    margin-top: 20px;
-    margin-left: 48%;
-    animation: fadeInAnimation 2s ease 2s 1 forwards;
-}
-
-#loginText {
-    opacity: 0;
-    text-align: center;
-    color: rgb(23, 22, 22);
-    font-size: 60px;
-    padding-right: 25px;
-    animation: fadeInAnimation 2s ease 1s 1 forwards;
-}
-
-#logInForm {
-    padding-top: 20%;
-    padding-right: 50px;
-
-}
 #signupForm {
     padding-top: 20%;
     padding-right: 50px;
-
-}
-
-#email-login {
-    opacity: 0;
-    margin-left: 40%;
-    width: 19%;
-    animation: fadeInAnimation 2s ease 1s 1 forwards;
-}
-
-#password-login {
-    opacity: 0;
-    margin-left: 40%;
-    width: 19%;
-    animation: fadeInAnimation 2s ease 2s 1 forwards;
 }
 
 #email-signup {
-    opacity: 0;
     margin-left: 40%;
     width: 19%;
-    animation: fadeInAnimation 2s ease 1s 1 forwards;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#email-signup-text {
+    background-color: rgba(0, 0, 0, .8);
+    border: thin solid white;
+    padding: 10px;
 }
 
 #username-signup {
-    opacity: 0;
     margin-left: 40%;
     width: 19%;
-    animation: fadeInAnimation 2s ease 2s 1 forwards;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 #password-signup {
-    opacity: 0;
     margin-left: 40%;
     width: 19%;
-    animation: fadeInAnimation 2s ease 2s 1 forwards;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 #signupText {
-    opacity: 0;
     text-align: center;
     color: rgb(239, 235, 235);
     font-size: 60px;
     padding-right: 25px;
-    animation: fadeInAnimation 2s ease 1s 1 forwards;
 }
 
-#label{
+#label {
     color: white;
     text-align: center;
     font-size: 30px;
     padding-right: 25px;
     margin-left: 40%;
-    animation: fadeInAnimation 2s ease 1s 1 forwards;
 }
+
+#signInBTN {
+    margin-top: 75px;
+    margin-left: 47.8%;
+    font-size: 22px;
+}
+
+#signupPageNavBTN:hover,
+#signupPageNavBTN:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    color: rgb(0, 0, 0);
+}
+
+#signInBTN:hover,
+#signInBTN:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    color: rgb(0, 0, 0);
+}
+
+
+/*-----------------------------Signup Page------------------------------------ */
+
+/*-------------------------- User Input Page---------------------------------- */
+#userInpBody {
+    background-image: url(../assets/images/artwork-the-witcher-3-wild-hunt-hd.jpg);
+    height: 1297px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#titleHeaderTextUserInp {
+    padding-top: 30px;
+    text-shadow: 2px 2px rgb(108, 108, 108);
+    color: #ffffff;
+    font-size: 56px;
+    justify-content: center;
+}
+
+#userInpNavBTN {
+    justify-content: flex-end;
+    margin: 10px 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+}
+
+#userInpNavBar {
+    justify-content: flex-end;
+}
+
+#userInpTextDescription1 {
+    text-shadow: 2px 2px rgb(108, 108, 108);
+    padding-top: 5%;
+    text-align: center;
+    color: white;
+    font-size: 45px;
+}
+
+#userInpNavBTN:hover,
+#userInpNavBTN:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    color: rgb(0, 0, 0);
+}
+
+
+/*-------------------------- User Input Page---------------------------------- */
 
 @keyframes fadeInAnimation {
     0% {
@@ -232,7 +407,24 @@
     }
 }
 
-#btn64-submit{
+/*-------------------------- About Us Page---------------------------------- */
+.mainContainer {
+    background-image: url(/assets/images/bluebg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aboutContent {
+    padding: 20px;
+}
+
+.aboutProfilePic {
+    justify-content: center;
+    padding-left: 10px;
+}
+
+/* #btn64-submit {
     margin-top: 10;
 }
 
@@ -284,4 +476,4 @@
         font-size: 24px;
         min-width: 196px;
     }
-}
+} */

@@ -1,0 +1,818 @@
+<div class="mainListContainer ">
+        <div class="mainHeader">
+            <header class="masterHeader text-[80px] text-center text-white text-bold justify-content-center align-items-center">
+                <h1>Rankedify's Top Games</h1>
+            </header>
+            <nav class="  text-white  p-50 d-flex p-2" id="homepage-nav">
+                {{#if loggedIn}}
+                <button type="button" id="navBTN-Homepage" class="btn btn-outline-light raise navBTN-Homepage">Log out</button>
+                {{else}}
+                <button type="button" id="navBTN-Homepage" class=" btn btn-outline-light raise navBTN-Homepage"><a href="/login"
+                        id="loginInNavBTN">Log
+                        in</a></button>
+                {{/if}}
+                <a type="button" id="navBTN-Homepage" class="btn btn-outline-light raise navBTN-Homepage" href="/list/:id">My list</a>
+            </nav>
+        </div>
+        <div class="listContainer  m-40  bg-white">
+            <h2 class="liHeader text-center text-[30px]">Master List:</h2>
+            <ul class="listItems p-3 text-center text-[15px] text-black">
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Grand_Theft_Auto_V" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Grand Theft Auto V</a></li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/The_Witcher_3:_Wild_Hunt" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Witcher 3: Wild Hunt</a></li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Portal_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Portal 2</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Tomb_Raider_(2013_video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Tomb Raider (2013)</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Counter-Strike:_Global_Offensive" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Counter-Strike: Global Offensive</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Elder Scrolls V: Skyrim</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Left_4_Dead_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >4 Dead 2</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Portal_(video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Portal</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/BioShock_Infinite" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >BioShock Infinite</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Life_Is_Strange" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Life is Strange</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Borderlands_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Borderlands 2</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Red_Dead_Redemption_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Red Dead Redemption 2</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Half-Life_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Half-Life 2</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/BioShock" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >BioShock</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Limbo_(video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Limbo</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Doom_(2016_video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >DOOM (2016)</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Fallout_4" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Fallout 4</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Destiny_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Destiny 2</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/God_of_War_(franchise)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >God of War</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Team_Fortress_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Team Fortress 2</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Payday_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >PAYDAY 2</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Horizon_Zero_Dawn" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Horizon Zero Dawn</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Grand_Theft_Auto_IV" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Grand Theft Auto IV</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Rocket_League" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Rocket League</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Dota_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Dota 2</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Metro_2033_(video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Metro 2033</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Terraria" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Terrariav</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Warframe" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Warframe</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Metal_Gear_Solid_V:_The_Phantom_Pain" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Metal Gear Solid V: The Phantom Pain</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Rise_of_the_Tomb_Raider" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Rise of the Tomb Raider</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Cyberpunk_2077" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" > Cyberpunk 2077</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/The_Walking_Dead_(video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Walking Dead: Season 1</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Batman:_Arkham_Knight" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Batman: Arkham Knight</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/The_Witcher_2:_Assassins_of_Kings" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Witcher 2: Assassins of Kings Enhanced Edition</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Middle-earth:_Shadow_of_Mordor" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Middle-earth: Shadow of Mordor</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Half-Life_2:_Lost_Coast" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Half-Life 2: Lost Coast</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Grand_Theft_Auto:_San_Andreas" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Grand Theft Auto: San Andreas</li>
+                <li class="p-1"><a href="https://witcher.fandom.com/wiki/The_Witcher:_Enhanced_Edition_Director%27s_Cut" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Witcher: Enhanced Edition Director's Cut</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/BioShock_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >BioShock 2</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Hitman_(franchise)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Hitman</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Half-Life_2:_Episode_One" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Half-Life 2: Episode One</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Half-Life_2:_Episode_Two" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Half-Life 2: Episode Two</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Mirror%27s_Edge" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Mirror's Edge</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Hotline_Miami" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Hotline Miami</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Dark_Souls_III" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Dark Souls III</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Deus_Ex:_Mankind_Divided" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Deus Ex: Mankind Divided</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Hollow_Knight" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Hollow Knight</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/League_of_Legends" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >League of Legends</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Outlast" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Outlast</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Spec_Ops:_The_Line" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Ops: The Line</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Little_Nightmares" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Little Nightmares</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Spider-Man_(2018_video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Marvel's Spider-Man</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Far_Cry_3" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Far Cry 3</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Amnesia:_The_Dark_Descent" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Amnesia: The Dark Descent</li>
+                <li class="p-1"><a href="https://www.pcgamingwiki.com/wiki/BioShock_Remastered" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >BioShock Remastered</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Alan_Wake" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Alan Wake</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Saints_Row:_The_Third" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Saints Row: The Third</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Uncharted_4:_A_Thief%27s_End" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Uncharted 4: A Thief's End</li>
+                <li class="p-1"><a href="https://www.pcgamingwiki.com/wiki/Half-Life_2:_Deathmatch" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Half-Life 2: Deathmatch</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Wolfenstein:_The_New_Order" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Wolfenstein: The New Order</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Borderlands_(video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Borderlands</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/L.A._Noire" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >L.A. Noire</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Half-Life_(video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Half-Life</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Detroit:_Become_Human" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Detroit: Become Human</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Super_Meat_Boy" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Super Meat Boy</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Prey_(2017_video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Prey</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Injustice:_Gods_Among_Us" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Injustice: Gods Among Us Ultimate Edition</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Path_of_Exile" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Path of Exile</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Dead_Space" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Dead Space</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Civilization_V" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Sid Meier's Civilization V</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/The_Last_of_Us" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Last Of Us Remastered</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Mass_Effect_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Mass Effect 2</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/For_Honor" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >For Honor</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Garry%27s_Mod" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Garry's Mod</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Assassin%27s_Creed_IV:_Black_Flag" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Assassin's Creed IV: Black Flag</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Hitman:_Absolution" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Hitman: Absolution</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Stardew_Valley" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Stardew Valley</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Fallout:_New_Vegas" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Fallout: New Vegas</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Dishonored" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Dishonored</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/PUBG:_Battlegrounds" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >PlayerUnknown's Battlegrounds</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Hellblade:_Senua%27s_Sacrifice" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Hellblade: Senua's Sacrifice</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Grand_Theft_Auto:_Vice_City" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Grand Theft Auto: Vice City</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Company_of_Heroes_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Company of Heroes 2</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Elder Scrolls V: Skyrim Special Edition</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Bloodborne" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Bloodborne</li>
+                <li class="p-1"><a href="https://half-life.fandom.com/wiki/Half-Life_Deathmatch:_Source" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Half-Life Deathmatch: Source</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Metal_Gear_Solid_V:_Ground_Zeroes" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Metal Gear Solid V: Ground Zeroes</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Control_(video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Control</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Borderlands:_The_Pre-Sequel" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Borderlands: The Pre-Sequel</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Just_Cause_3" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Just Cause 3</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Mortal_Kombat_X" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Mortal Kombat X</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Dishonored_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Dishonored 2</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Don%27t_Starve" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Don't Starve Together</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Bastion_(video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Bastion</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Journey_(2012_video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Journey</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Counter-Strike:_Source" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Counter-Strike: Source</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Just_Cause_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Just Cause 2</li>
+                <li class="p-1"><a href="hhttps://en.wikipedia.org/wiki/Mad_Max_(2015_video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Mad Max</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Star_Wars_Jedi:_Fallen_Order" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Star Wars Jedi: Fallen Order</li>                
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Metro:_Last_Light" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Metro: Last Light Redux</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/XCOM:_Enemy_Unknown" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >XCOM: Enemy Unknown</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Monster_Hunter:_World" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Monster Hunter: World</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Nier:_Automata" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >NieR:Automata</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Br%C3%BCtal_Legend" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Brutal Legend</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Counter-Strike" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Counter-Strike</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Metro_2033_(video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Metro 2033 Redux</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Brothers:_A_Tale_of_Two_Sons" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Brothers: A Tale of Two Sons</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/BioShock_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >BioShock 2 Remastered</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Left_4_Dead" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Left 4 Dead</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Heavy_Rain" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Heavy Rain</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Fall_Guys" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Fall Guys: Ultimate Knockout</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Mafia_II" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Mafia II</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Psychonauts" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Psychonauts</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Titanfall_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Titanfall 2</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Resident_Evil_7:_Biohazard" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Resident Evil 7: Biohazard</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Max_Payne_3" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Max Payne 3</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Sega_Genesis_Classics" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >SEGA Mega Drive and Genesis Classics</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Batman:_Arkham_City" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Batman: Arkham City - Game of the Year Edition</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Cities:_Skylines" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Cities: Skylines</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Watch_Dogs" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Watch Dogs</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Batman:_Arkham_Asylum" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Batman: Arkham Asylum Game of the Year Edition</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/The_Darkness_II" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Darkness II</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Fallout_(video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Fallout</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Darksiders" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Darksiders</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Transistor_(video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Transistor</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Firewatch" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Firewatch</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Far_Cry_5" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Far Cry 5</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Assassin%27s_Creed_II" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Assassin's Creed II</li>                
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Minecraft" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Minecraft</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Paladins_(video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Paladins</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Shadow_of_the_Tomb_Raider" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Shadow of the Tomb Raider</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Saints_Row_IV" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Saints Row IV</li>
+                <li class="p-1"><a href="hhttps://en.wikipedia.org/wiki/Inside_(video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >INSIDE</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Alien:_Isolation" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Alien: Isolation</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Middle-earth:_Shadow_of_War" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Middle-earth: Shadow of War</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Assassin%27s_Creed_Odyssey" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Assassin's Creed Odyssey</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Undertale" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Undertale</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Layers_of_Fear" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Layers of Fear</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Batman:_Arkham_Origins" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Batman: Arkham Origins</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Hitman_2_(2018_video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Hitman 2</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Grid_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >GRID 2</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/The_Wolf_Among_Us" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Wolf Among Us</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Sekiro:_Shadows_Die_Twice" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Sekiro: Shadows Die Twice</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Assassin%27s_Creed_Origins" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Assassin's Creed Origins</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/The_Stanley_Parable" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Stanley Parable</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Tom Clancy's Rainbow Six Siege</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Titan_Quest" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Titan Quest Anniversary Edition</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Ark:_Survival_Evolved" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >ARK: Survival Of The Fittest</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Trine_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Trine 2: Complete Story</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Battlefield_1" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Battlefield 1</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Cuphead" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Cuphead</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Assassin%27s_Creed_III" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Assassin's Creed III</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Red_Dead_Redemption" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Red Dead Redemption</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Crusader_Kings_II" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Crusader Kings II</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Unturned" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Unturned</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Deus_Ex:_Human_Revolution" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Deus Ex: Human Revolution - Director's Cut</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Call_of_Duty:_Modern_Warfare_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Call of Duty: Modern Warfare 2</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Far_Cry_4" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Far Cry 4</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Saints_Row_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Saints Row 2</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Resident_Evil_5" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Resident Evil 5</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Metro_Exodus" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Metro Exodus</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Insurgency_(video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Insurgency</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/No_Man%27s_Sky" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >No Man's Sky</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Viscera_Cleanup_Detail" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Viscera Cleanup Detail: Shadow Warrior</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/XCOM_2" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >XCOM 2</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/War_Thunder" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >War Thunder</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Fez_(video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >FEZ</li>
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Hades_(video_game)" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Hades
+                <li class="p-1"><a href="https://en.wikipedia.org/wiki/Uncharted_3:_Drake%27s_Deception" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Uncharted 3: Drake's Deception</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Shadowrun Returns</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Dead Island</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Amnesia: A Machine for Pigs</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >ARK: Survival Evolved</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Thief</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >SOMA</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Call of Duty: Black Ops III</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Total War: SHOGUN 2</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Last Of Us</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Ori and the Blind Forest: Definitive Editionv
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Grand Theft Auto III</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Last of Us Part II</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Watch Dogs 2</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Wolfenstein II: The New Colossus</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Magicka</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Darksiders Warmastered Edition</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Killing Floor</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Lara Croft and the Temple of Osiris</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Counter-Strike: Condition Zero</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Dragon Age: Origins</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Call of Duty: Black Ops</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Halo Infinite</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Ori and the Blind Forest</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Rayman Legends</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >This War of Mine</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >South Park: The Stick of Truth</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >DiRT Rally</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >DOOM Eternal</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Medieval Warfare</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Bureau: XCOM Declassified</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Batman: Arkham City</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Papers Please</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >DmC: Devil May Cry</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Kingdom Come: Deliverance</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Star Wars: Knights of the Old Republic</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Quake Champions</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Binding of Isaac</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Fallout 3</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Castle Crashers</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Dead Space 2</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Assassin's Creed Unity</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Resident Evil 4 (2005)</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Don't Starve</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Call of Juarez: Gunslinger</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Halo: The Master Chief Collection</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Among Us</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Quantum Break</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Grim Fandango Remastered</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Darkest Dungeon</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Disco Elysium</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Sid Meier's Civilization VI</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Mafia III</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Homefront</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Syberia</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Beyond: Two Souls</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >What Remains of Edith Finch</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Dead Cells</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Torchlight II</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Subnautica</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Call of Duty: WWII</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Ratchet & Clank (2016)</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Fallout Shelter</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Guacamelee! Super Turbo Championship Edition</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Half-Life: Blue Shift</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Half-Life: Opposing Force</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Witness</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Battlefield 4</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Goat Simulator</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Sniper Elite V2</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >inFAMOUS Second Son</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Divinity: Original Sin 2</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Broforce</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Deus Ex: Human Revolution</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Sleeping Dogs</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >A Plague Tale: Innocence</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >FTL: Faster Than Light</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Call of Duty: Modern Warfare 3</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Sleeping Dogs: Definitive Edition</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Tom Clancy's The Division</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Devil May Cry 5</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Walking Dead: Season 2</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Dragon Age: Inquisition</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >SUPERHOT</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Yakuza 0</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Black Desert Online</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Until Dawn</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Resident Evil 6</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Hotline Miami 2: Wrong Number</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Outer Worlds</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >FINAL FANTASY XV</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Alan Wake's American Nightmare</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Dying Light: The Following - Enhanced Edition</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >A Story About My Uncle</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Kingdom: Classic</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >PAYDAY The Heist</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Bayonetta</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Batman: Arkham Asylum</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Overcooked</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >To the Moon</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Call of Duty: Black Ops II</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Forza Horizon 4</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Warhammer 40000: Space Marine</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Resident Evil 2 (1998)</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Legend of Zelda: Breath of the Wild</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Dark Souls: Prepare To Die Edition</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Days Gone</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Syberia 2</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Age of Wonders III</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Star Wars: Battlefront II (2017)</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Company of Heroes</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Assassin's Creed Syndicate</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Surviving Mars</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Oddworld: Abe's Oddysee</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >POSTAL 2</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Borderlands Game of the Year Enhanced</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Dark Souls II: Scholar of the First Sin</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Ori and the Will of the Wisps</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Metal Gear Rising: Revengeance</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Deus Ex: Game of the Year Edition</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Hitman: Blood Money</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >SMITE</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Race Driver: Grid</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Euro Truck Simulator 2</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Darksiders II</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Tropico 4</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >A Way Out</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Braid</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Guns of Icarus Online</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Team Fortress Classic</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Playroom</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Lords of the Fallen</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >LEGO The Lord of the Rings</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Sid Meier's Civilization III Complete</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Game of Thrones - A Telltale Games Series</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Jotun: Valhalla Edition</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Titan Souls</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Destiny</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Wolfenstein: The Old Blood</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Elden Ring</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Ghost of Tsushima</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Mark of the Ninja</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Murdered: Soul Suspect</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Red Orchestra 2: Heroes of Stalingrad with Rising Storm</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Divinity: Original Sin - Enhanced Edition</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Sanctum 2</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Rust</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Darksiders II Deathinitive Edition</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Ryse: Son of Rome</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Long Dark</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Borderlands 3</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Star Wars: Knights of the Old Republic II - The Sith Lords</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >S.T.A.L.K.E.R.: Shadow of Chernobyl</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Half-Life: Source</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Human: Fall Flat</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Child of Light</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Dear Esther: Landmark Edition</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Celeste</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Black Mesa</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Binding of Isaac: Rebirth</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Trine Enchanted Edition</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Hacknet</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Max Payne</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Evil Within</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Jet Set Radio</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Serious Sam Fusion 2017 (beta)</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Mafia: The City of Lost Heaven</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Far Cry 3: Blood Dragon</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Prison Architect</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Dead by Daylight</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Frostpunk</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Assassin's Creed</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Resident Evil</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Serious Sam 3: BFE</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Resident Evil 2</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Broken Age</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Final Fantasy VII</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Remember Me</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Endless Space - Collection</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Tales from the Borderlands</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Doki Doki Literature Club!</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Sea of Thieves</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Dark Souls: Remastered</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Neverwinter</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >STAR WARS Battlefront</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Fallout 2</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >ABZU</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >BattleBlock Theater</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >F.E.A.R.</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Killing Floor 2</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Resident Evil Revelations 2 / Biohazard Revelations 2</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Oxenfree</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Orwell: Keeping an Eye On You</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Sims 4</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Beholder</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Minion Masters</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Mortal Kombat 11</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >LEGO The Hobbit</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Elder Scrolls Online: Tamriel Unlimited</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Starbound</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Enter the Gungeon</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Far Cry 2</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Monaco: What's Yours Is Mine</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Assassin's Creed Brotherhood</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Sonic Mania</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Forest</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Dust: An Elysian Tail</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Flame in the Flood</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Fallout 3: Game of the Year Edition</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Battlefield 3</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Killer is Dead - Nightmare Edition</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Lara Croft and the Guardian of Light</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Rogue Legacy</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Fortnite Battle Royale</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Persona 5</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Valiant Hearts: The Great War</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Shadow of the Colossus (2011)</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >DiRT Showdown</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >F.E.A.R. 3</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Burnout Paradise: The Ultimate Box</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Spelunky</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Counter-Strike: Condition Zero Deleted Scenes</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Dying Light</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Crysis 2 - Maximum Edition</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >F.E.A.R. 2: Project Origin</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >The Swapper</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Overlord</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Wallpaper Engine</li>
+                <li class="p-1"><a href="" target="_blank"
+                    class="listGame hover:text-blue-500 decoration-2" >Deponia</li>
+            
+            </ul>
+        </div>
+    </div>
+</body>
