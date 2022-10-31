@@ -451,12 +451,8 @@
 
 /*------------------------------------ User Profile ----------------------------------------*/
 
-.listBody {
-    background-color: black;
-}
-
 #titleHeaderTextLogin {
-    color: #000000;
+    color: #ffffff;
 }
 
 .container {
@@ -509,8 +505,24 @@
 /*-------------------------- Master List---------------------------------- */
 
 .mainListContainer {
-    background-image: url(/assets/images/centeredsquare1.webp);
+    background-image: url(/assets/images//assets/images/centeredsquare1.webp);
     background-position: center;
+    height: 100%;
+}
+
+.listContainer {
+    background-image: url(/assets/images/masterlistbg.jpg);
+    border-radius: 2%;
+    background-position: center;
+}
+
+.listItems li{
+    color: white;
+}
+
+.liHeader {
+    padding: 20px;
+    color: white;
 }
 
 
