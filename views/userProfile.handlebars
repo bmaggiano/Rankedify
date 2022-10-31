@@ -9,17 +9,18 @@
     <section class="profile">
         <div class="profile-picture"></div>
         <div class="userame-title">
-            <h2>{{username.username}}'s List</h2>
+            <h2>{{list.username}}'s List</h2>
         </div>
         <ul>
-            {{#each list.user_inputs.[0]}}
+
+            {{#each list.user_input}}
             <li>{{this}}</li>
             {{/each}}
-            {{!-- {{list.user_inputs.[0].game_input_one}}
-            {{list.user_inputs.[0].game_input_two}}
-            {{list.user_inputs.[0].game_input_three}}
-            {{list.user_inputs.[0].game_input_four}}
-            {{list.user_inputs.[0].game_input_five}} --}}
+            {{!-- {{list.user_input.game_input_one}}
+            {{list.user_input.game_input_two}}
+            {{list.user_input.game_input_three}}
+            {{list.user_input.game_input_four}}
+            {{list.user_input.game_input_five}} --}}
         </ul>
 
     </section>
