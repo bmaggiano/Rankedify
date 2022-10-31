@@ -11,10 +11,17 @@ router.post('/signup', async (req, res) => {
     });
 
     req.session.save(() => {
+      req.session.username = dbUserData.username;
       req.session.loggedIn = true;
       req.session.user_id = dbUserData.id;
+      req.session.user_input = dbUserData.user_input
 
-      res.status(200).json(dbUserData);
+      res.render('userListInput', {
+        user_input: req.session.user_input,
+        user_id: req.session.user_id,
+        loggedIn: req.session.loggedIn,
+        username: req.session.username
+      })
     });
   } catch (err) {
     console.error(err)
@@ -32,9 +39,7 @@ router.post('/login', async (req, res) => {
     });
 
     if (!dbUserData) {
-      res
-        .status(400)
-        .json({ message: 'Incorrect username or password. Please try again!' });
+      window.alert('Incorrect username or password. Please try again!');
       return;
     }
 
@@ -48,11 +53,17 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.save(() => {
+      req.session.username = dbUserData.username;
       req.session.loggedIn = true;
       req.session.user_id = dbUserData.id;
+      req.session.user_input = dbUserData.user_input
 
-      res
-        .status(200).json({ user: dbUserData, message: 'You are now logged in!' });
+      res.render('homepage', {
+        username: req.session.username,
+        user_input: req.session.user_input,
+        loggedIn: req.session.loggedIn,
+        user_id: req.session.user_id
+      })
     });
   } catch (err) {
     res.status(500).json(err);

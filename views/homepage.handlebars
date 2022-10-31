@@ -1,14 +1,19 @@
-<body id="homepageBody">
+<div id="homepageBody">
     <nav class="d-flex p-2" id="homepage-nav">
         {{#if loggedIn}}
-        <button type="button" id="navBTN-Homepage" class="btn btn-outline-light raise navBTN-Homepage">Log out</button>
+        <button type="button" id="navBTN-Homepage" class="btn btn-outline-light navBTN-Homepage"><a href="/"
+                id="logoutNavBTN">Log
+                Out</a></button>
         {{else}}
-        <button type="button" id="navBTN-Homepage" class=" btn btn-outline-light raise navBTN-Homepage"><a href="/login"
+        <button type="button" id="navBTN-Homepage" class=" btn btn-outline-light navBTN-Homepage"><a href="/login"
                 id="loginInNavBTN">Log
                 in</a></button>
         {{/if}}
-        <a type="button" id="navBTN-Homepage" class="btn btn-outline-light raise navBTN-Homepage" href="/list/:id">My list</a>
-        <a type="button" id="nav-btn-aboutus" class="btn btn-outline-light raise navBTN-Homepage">About us</a>
+        <button type="button" id="myList" class="btn btn-outline-light raise navBTN-Homepage"><a href="/list/:id">My
+            list</a></button>
+        <button type="button" id="nav-btn-aboutus" class="btn btn-outline-light raise navBTN-Homepage"><a href="/list">Users Picks</a></button>
+        <button type="button" id="nav-btn-aboutus" class="btn btn-outline-light raise navBTN-Homepage"><a href="/aboutus">About us</a></button>
+        <button type="button" id="nav-btn-aboutus" class="btn btn-outline-light raise navBTN-Homepage"><a href="/toppicks">Top Picks</a></button>
     </nav>
     <h1 id="titleHeaderText" class="d-flex">Rankedify</h1>
     <section id="titleHeader" class="">
@@ -18,4 +23,8 @@
             for free.</div>
     </section>
     <script src="/js/aboutUs.js"></script>
-</body>
+    {{#if loggedIn}}
+    <script src="/js/mylist.js"></script>
+    <script src="/js/logout.js"></script>
+    {{/if}}
+</div>

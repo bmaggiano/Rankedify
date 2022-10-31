@@ -1,13 +1,27 @@
-<nav class="d-flex p-2" id="userInpNavBar">
-    <a type="button" id="userInpNavBTN" class=" btn btn-outline-light" href="/" id="HomeBTN">Home</a>
-    <a type="button" id="userInpNavBTN" class="btn btn-outline-light">About us</a>
-</nav>
-<h1 id="titleHeaderTextUserInp" class="d-flex">Rankedify</h1>
+<div id="userInpBody">
+    <nav class="d-flex p-2" id="userInpNavBar">
+        <a type="button" id="userInpNavBTN" class=" btn btn-outline-light" href="/">Home</a>
+        <a type="button" id="userInpNavBTN" class=" btn btn-outline-light" href="/userpicks">Users Picks</a>
+        <a type="button" id="userInpNavBTN" class=" btn btn-outline-light" href="/aboutus">About Us</a>
+        <button type="button" id="nav-btn-aboutus" class="btn btn-outline-light raise navBTN-Homepage"><a href="/toppicks">Top Picks</a></button>
+    </nav>
+    <h1 id="titleHeaderTextUserInp" class="d-flex">Rankedify</h1>
+    <p id="userInpTextDescription1">Create your list below and share it with the world</p>
+    <p></p>
+    <div id="input-list">
+        <div id="input-box">
+            <input id="input-one" type="text" class="input" placeholder="1st Game">
+            <input id="input-two" type="text" class="input" placeholder="2nd Game">
+            <input id="input-three" type="text" class="input" placeholder="3rd Game">
+            <input id="input-four" type="text" class="input" placeholder="4th Game">
+            <input id="input-five" type="text" class="input" placeholder="5th Game">
+        </div>
+        <div>
+            <button type="button" class="btn btn-outline-light" id="userInpSubmitBtn">Share your list</button>
+        </div>
+    </div>
+    <script src="./js/autocomplete.js"></script>
+    <script src="./js/userlistinput.js"></script>
 
-<body id="userInpBody">
 
-
-
-
-
-</body>
+</div>

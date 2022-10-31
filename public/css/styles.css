@@ -14,6 +14,36 @@
     background-size: cover;
 }
 
+#loginBody {
+    background-image: url(../assets/images/Sekiro3.png);
+    height: 1297px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#signupBody {
+    background-image: url(../assets/images/Elden\ Ring.png);
+    height: 1297px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#profileBody {
+    background-image: url(../assets/images/Stardew\ Valley.png);
+    height: 1297px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#titleHeader {
+    justify-content: center;
+    text-align: center;
+
+}
+
 #titleHeaderText {
     padding-top: 30px;
     color: white;
@@ -85,7 +115,7 @@
 .raise:focus {
     box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
     transform: translateY(-0.25em);
-    color: #ffa260
+    color: #ffffff
 }
 
 
@@ -95,7 +125,6 @@
 /*------------------------------Login Page------------------------------------ */
 #loginBody {
     background-image: url(../assets/images/R.jpg);
-    /* background-image: url(../assets/images/Sekiro3.png); */
     height: 1297px;
     background-position: center;
     background-repeat: no-repeat;
@@ -185,7 +214,7 @@
 }
 
 #userName-login {
-    color: black;
+    color: rgb(255, 255, 255);
     text-align: center;
     margin-left: 40%;
     width: 19%;
@@ -194,26 +223,8 @@
     background-color: rgba(0, 0, 0, .5);
 }
 
-input::-webkit-input-placeholder {
-    color: rgb(255, 255, 255) !important;
-}
-
-input:-moz-placeholder {
-    /* Firefox 18- */
-    color: rgb(255, 255, 255) !important;
-}
-
-input::-moz-placeholder {
-    /* Firefox 19+ */
-    color: rgb(255, 255, 255) !important;
-}
-
-input:-ms-input-placeholder {
-    color: rgb(255, 255, 255) !important;
-}
-
-
 #password-login {
+    color: white;
     text-align: center;
     margin-left: 40%;
     width: 19%;
@@ -223,6 +234,16 @@ input:-ms-input-placeholder {
 #HERE-BTN {
     text-decoration: none;
     color: red;
+}
+
+#userName-login::placeholder {
+    text-align: center;
+    color: white;
+}
+
+#password-login::placeholder {
+    color: white;
+    text-align: center;
 }
 
 /*------------------------------Login Page------------------------------------ */
@@ -258,11 +279,6 @@ input:-ms-input-placeholder {
     padding-right: 50px;
 }
 
-#email-signup {
-    margin-left: 40%;
-    width: 19%;
-    background-color: rgba(0, 0, 0, .5);
-}
 
 #email-signup-text {
     background-color: rgba(0, 0, 0, .8);
@@ -270,16 +286,25 @@ input:-ms-input-placeholder {
     padding: 10px;
 }
 
+#email-signup {
+    margin-left: 40%;
+    width: 19%;
+    background-color: rgba(0, 0, 0, .8);
+    color: #ffffff;
+}
+
 #username-signup {
     margin-left: 40%;
     width: 19%;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .8);
+    color: #ffffff;
 }
 
 #password-signup {
     margin-left: 40%;
     width: 19%;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .8);
+    color: #ffffff;
 }
 
 #signupText {
@@ -317,40 +342,162 @@ input:-ms-input-placeholder {
     color: rgb(0, 0, 0);
 }
 
+#email-signup::placeholder {
+    text-align: center;
+    color: #ffffff;
+}
+
+#username-signup::placeholder {
+    text-align: center;
+    color: #ffffff;
+}
+
+#password-signup::placeholder {
+    text-align: center;
+    color: #ffffff;
+}
 
 /*-----------------------------Signup Page------------------------------------ */
 
 /*-------------------------- User Input Page---------------------------------- */
 #userInpBody {
-    background-image: url(../assets/images/artwork-the-witcher-3-wild-hunt-hd.jpg);
+
+    background-image: url(../assets/images/3026429.jpg);
+
     height: 1297px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+
+
+#input-one {
+    margin: 5%;
+    margin-left: 24.5%;
+    display: block;
+    margin-bottom: 20px;
+
+}
+
+
+#input-two {
+    margin: 5%;
+    margin-left: 24.5%;
+    display: block;
+    margin-bottom: 20px;
+
+}
+
+#input-three {
+    margin: 5%;
+    margin-left: 24.5%;
+    display: block;
+    margin-bottom: 20px;
+
+}
+
+#input-four {
+    margin: 5%;
+    margin-left: 24.5%;
+    display: block;
+    margin-bottom: 20px;
+
+}
+
+#input-five {
+    margin: 5%;
+    margin-left: 24.5%;
+    display: block;
+    margin-bottom: 20px;
+
+}
+
+
 #titleHeaderTextUserInp {
     padding-top: 30px;
-    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px rgb(108, 108, 108);
+    color: #ffffff;
     font-size: 56px;
     justify-content: center;
 }
 
-#signupPageNavBTN {
+#userInpNavBTN {
     justify-content: flex-end;
     margin: 10px 10px;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 22px;
-
 }
 
 #userInpNavBar {
     justify-content: flex-end;
 }
 
+#userInpTextDescription1 {
+    text-shadow: 2px 2px rgb(108, 108, 108);
+    padding-top: 5%;
+    text-align: center;
+    color: white;
+    font-size: 45px;
+}
+
+#input-list {
+    margin-top: 4%;
+    max-width: 14%;
+    padding-top: 2%;
+    margin-left: 43.6%;
+    border: solid thin rgb(255, 255, 255);
+    padding-bottom: 2%;
+    border-radius: 2%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#userInpSubmitBtn {
+    text-align: center;
+    margin-left: 32%;
+    margin-top: 10%;
+}
+
+.input::placeholder {
+    color: black;
+    text-align: center;
+}
+
+#userInpNavBTN:hover,
+#userInpNavBTN:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    color: rgb(0, 0, 0);
+}
+
 
 /*-------------------------- User Input Page---------------------------------- */
+
+/*------------------------------------ User Profile ----------------------------------------*/
+
+#titleHeaderTextLogin {
+    color: #ffffff;
+}
+
+.container {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    width: 10em;
+}
+
+#span {
+    box-shadow: -11px 9px 1px #3cb68f;
+    background-color: black;
+    border-radius: 16px;
+}
+
+/*------------------------------------ User Profile ----------------------------------------*/
 
 @keyframes fadeInAnimation {
     0% {
@@ -362,6 +509,30 @@ input:-ms-input-placeholder {
         opacity: 1;
     }
 }
+
+/*-------------------------- About Us Page---------------------------------- */
+.mainContainer {
+    background-image: url(/assets/images/bluebg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aboutContent {
+    padding: 20px;
+}
+
+.aboutProfilePic {
+    justify-content: center;
+    padding-left: 10px;
+
+
+/*-------------------------- Master List---------------------------------- */
+
+.mainListContainer {
+    background-image: url(centeredsquare1.webp);
+    background-position: center;
+};
 
 /* #btn64-submit {
     margin-top: 10;
@@ -415,4 +586,4 @@ input:-ms-input-placeholder {
         font-size: 24px;
         min-width: 196px;
     }
-} */
+

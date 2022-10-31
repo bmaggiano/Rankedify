@@ -1,28 +1,31 @@
-<nav class="d-flex p-2" id="loginNavBar">
-    <a type="button" id="signupPageNavBTN" class=" btn btn-outline-light" href="/" id="HomeBTN">Home</a>
-    <a type="button" id="signupPageNavBTN" class="btn btn-outline-light">About us</a>
-</nav>
-<h1 id="titleHeaderTextSignup" class="d-flex">Rankedify</h1>
+<div id="signupBody">
+    <nav class="d-flex p-2" id="loginNavBar">
+        <a type="button" id="signupPageNavBTN" class=" btn btn-outline-light" href="/" id="HomeBTN">Home</a>
+        <a type="button" id="signupPageNavBTN" class="btn btn-outline-light">About us</a>
+        <button type="button" id="nav-btn-aboutus" class="btn btn-outline-light raise navBTN-Homepage"><a href="/toppicks">Top Picks</a></button>
+    </nav>
+    <h1 id="titleHeaderTextSignup" class="d-flex">Rankedify</h1>
 
-<p id="signupText">Sign Up Below</p>
-
-<body id="signupBody">
+    <p id="signupText">Sign Up Below</p>
     <div id='loginArea' class=>
         <div id="logInForm" class="col-12">
             <form class="login-form">
                 <div style="padding-top:20px;">
-                    <p style="text-align: center; color:white; font-size: 24px;"><span id="email-signup-text">
+                    <p style="text-align: center; color:white; font-size: 24px;      padding-bottom: 25px;"><span
+                            id="email-signup-text">
                             Email</span></p>
                     <input type="email" id="email-signup" class="form-control" placeholder="Enter New Email" />
                 </div>
                 <div style="padding-top:20px;">
-                    <p style="text-align: center; color:white; font-size: 24px;"><span
-                            id="email-signup-text">Username</span></p>
+                    <p style="text-align: center; color:white; font-size: 24px;     padding-bottom: 25px;"><span
+                            id="email-signup-text">
+                            Username</span></p>
                     <input type="text" id="username-signup" class="form-control" placeholder="Enter New Username" />
                 </div>
                 <div style="padding-top:20px;">
-                    <p style="text-align: center; color:white; font-size: 24px;"><span
-                            id="email-signup-text">Password</span></p>
+                    <p style="text-align: center; color:white; font-size: 24px;      padding-bottom: 25px;"><span
+                            id="email-signup-text">
+                            Password</span></p>
                     <input type="password" id="password-signup" class="form-control" placeholder="Enter New Password" />
                 </div>
                 <div>
@@ -32,42 +35,4 @@
         </div>
     </div>
     <script src="/js/signUp.js"></script>
-</body>
-
-
-
-
-{{!-- <nav class="d-flex p-2" id="signupPageNavBTN">
-    <button type="button" id="signupPageNavBTN" class=" btn btn-outline-dark"><a href="/"
-            id="signupPageNavBTN">Home</a></button>
-    <a type="button" id="signupPageNavBTN" class="btn btn-outline-dark">My list</a>
-    <a type="button" id="signupPageNavBTN" class="btn btn-outline-dark">About us</a>
-</nav>
-<h1 id="titleHeaderTextSignup" class="d-flex">Rankedify</h1>
-
-<body id="signupBody">
-    <div class="input-container">
-        <div id="loginArea" class="col-12">
-            <div class="card-header">
-                <h2 id="signupText">Sign up and Rank today!</h2>
-            </div>
-            <div class="input-field" id="signupForm">
-                <form>
-                    <label for="email" id="label">E-Mail</label><br>
-                    <input type="text" id="email-signup" name="email" placeholder="Enter Valid Email"><br>
-                    <label for="username" id="label">Username</label><br>
-                    <input type="text" id="username-signup" name="username" placeholder="Enter A Username"><br>
-                    <label for="password" id="label">Password</label><br>
-                    <input type="text" id="password-signup" name="password" placeholder="Please Enter  A Password"><br>
-                </form>
-            </div>
-            <div class="submit-button" id="btn64-submit">
-                <button class="button-64" role="button" style="margin-top: 20; margin-top: 20px;"><span class="text">
-                        Let's Get Ranking!
-                    </span></button>
-            </div>
-        </div>
-    </div>
-    <script src="/js/signUp.js"></script>
-
-</body> --}}
+</div>

@@ -1,0 +1,42 @@
+<nav class="d-flex p-2" id="loginNavBar">
+    <a type="button" id="loginPageNavBTN" class=" btn btn-outline-dark" href="/" id="HomeBTN">Home</a>
+                {{#if loggedIn}}
+        <button type="button" id="loginPageNavBTN" class="btn btn-outline-dark"><a href="/"
+                id="logoutNavBTN">Log
+                Out</a></button>
+                {{/if}}
+    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark" href="/list/:id">My list</a>
+    <a type="button" id="loginPageNavBTN" class="btn btn-outline-dark" href="/aboutus">About us</a>
+     <button type="button" id="nav-btn-aboutus" class="btn btn-outline-light raise navBTN-Homepage"><a href="/toppicks">Top Picks</a></button>
+</nav>
+<h1 id="titleHeaderTextLogin" class="d-flex">Rankedify</h1>
+
+<div>
+    <section class="profile">
+        <div class="profile-picture"></div>
+        <div class="userame-title text-center">
+            <h2>Check out everyone's top 5 list!</h2>
+        </div>
+{{#each list}}
+<div class="card row" style="width: 18rem;">
+  <div class="card-header">
+    {{this.username}}'s Top 5 List!
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">1. {{this.user_input.game_input_one}}</li>
+    <li class="list-group-item">2. {{this.user_input.game_input_two}}</li>
+    <li class="list-group-item">3. {{this.user_input.game_input_three}}</li>
+    <li class="list-group-item">4. {{this.user_input.game_input_four}}</li>
+    <li class="list-group-item">5. {{this.user_input.game_input_five}}</li>
+  </ul>
+</div>
+{{/each}}
+
+    </section>
+
+    {{#if loggedIn}}
+    <script src="/js/mylist.js"></script>
+    <script src="/js/logout.js"></script>
+    {{/if}}
+    <script src="/js/login.js"></script>
+</div>

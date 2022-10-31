@@ -1,15 +1,18 @@
 const router = require('express').Router();
 const { Usergames, Games, User } = require('../models/');
+const UserInput = require('../models/userInput');
 const seedGames = require('../seed/gameSeeds');
+const withAuth = require('../utils/auth')
 
 router.get('/', async (req, res) => {
     try {
-        res.render('homepage')
+        res.render('homepage', {
+            loggedIn: req.session.loggedIn
+        })
     } catch {
         res.status(500).json(err);
     }
 });
-
 
 router.get('/login', async (req, res) => {
     try {
@@ -19,12 +22,13 @@ router.get('/login', async (req, res) => {
     }
 });
 
-
-//incomplete, need to change this res.render to actual handlebars
 router.get('/list', async (req, res) => {
     try {
         const listData = await User.findAll({
-            include: [{ model: Games, through: Usergames }]
+            include: [
+                {
+                    model: UserInput,
+                }],
         });
 
         if (!listData) {
@@ -33,8 +37,12 @@ router.get('/list', async (req, res) => {
         }
         const list = await listData.map((listItem) => listItem.get({ plain: true }))
 
-        res.status(200).json(listData)
-
+        console.log(list[0].user_input.game_input_one)
+        // res.status(200).json(listData)
+        res.render('allList', {
+            list,
+            loggedIn: req.session.loggedIn
+        })
 
     } catch (err) {
         console.error(err)
@@ -42,14 +50,14 @@ router.get('/list', async (req, res) => {
     }
 });
 
-router.get('/list/:id', async (req, res) => {
+router.get('/list/:id', withAuth, async (req, res) => {
     try {
-        const listData = await User.findByPk(req.params.id, {
+        const listData = await User.findByPk(req.session.user_id, {
             include: [
                 {
-                    model: Games,
-                    through: Usergames,
-                    attributes: ["game_name"]
+                    model: UserInput,
+                    attributes: ["game_input_one",
+                "game_input_two", "game_input_three", "game_input_four", "game_input_five"]
                 }],
         });
         if (!listData) {
@@ -58,11 +66,11 @@ router.get('/list/:id', async (req, res) => {
         }
 
         const list = listData.get({ plain: true });
-
+        console.log(list)
 
         res.render('userProfile', {
             list,
-            logged_in: req.session.logged_in,
+            loggedIn: req.session.loggedIn,
         })
 
     } catch (err) {
@@ -90,7 +98,9 @@ router.get('/master', async (req, res) => {
 
 router.get('/userinput', async (req, res) => {
     try {
-        res.render('userListInput')
+        res.render('userListInput', {
+            loggedIn: req.session.loggedIn
+        })
     } catch (err) {
         res.status(500).json(err)
     }
@@ -98,14 +108,22 @@ router.get('/userinput', async (req, res) => {
 
 router.get('/aboutus', async (req, res) => {
     try {
-        res.render('aboutUs')
+        res.render('aboutUs', {
+            loggedIn: req.session.loggedIn
+        })
     } catch (err) {
         res.status(500).json(err);
     }
 });
 
-
-
-
+router.get('/toppicks', async (req, res) => {
+    try {
+        res.render('masterList', {
+            loggedIn: req.session.loggedIn
+        })
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
 module.exports = router;
