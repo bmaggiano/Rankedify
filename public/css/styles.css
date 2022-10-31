@@ -184,7 +184,7 @@
 }
 
 #userName-login {
-    color: black;
+    color: rgb(255, 255, 255);
     text-align: center;
     margin-left: 40%;
     width: 19%;
@@ -194,6 +194,7 @@
 }
 
 #password-login {
+    color: white;
     text-align: center;
     margin-left: 40%;
     width: 19%;
@@ -203,6 +204,16 @@
 #HERE-BTN {
     text-decoration: none;
     color: red;
+}
+
+#userName-login::placeholder {
+    text-align: center;
+    color: white;
+}
+
+#password-login::placeholder {
+    color: white;
+    text-align: center;
 }
 
 /*------------------------------Login Page------------------------------------ */
@@ -301,6 +312,20 @@
     color: rgb(0, 0, 0);
 }
 
+#email-signup::placeholder {
+    text-align: center;
+    color: #ffffff;
+}
+
+#username-signup::placeholder {
+    text-align: center;
+    color: #ffffff;
+}
+
+#password-signup::placeholder {
+    text-align: center;
+    color: #ffffff;
+}
 
 /*-----------------------------Signup Page------------------------------------ */
 
@@ -316,36 +341,46 @@
 
 
 #input-one {
+    margin: 5%;
+    margin-left: 21%;
     display: block;
     margin-bottom: 20px;
+
 }
 
-#game-1 {
-    text-align: center;
-    font-size: 26px;
-    color: white;
-    padding-left: 48px;
-}
 
 #input-two {
+    margin: 5%;
+    margin-left: 21%;
     display: block;
     margin-bottom: 20px;
+
 }
 
 #input-three {
+    margin: 5%;
+    margin-left: 21%;
     display: block;
     margin-bottom: 20px;
+
 }
 
 #input-four {
+    margin: 5%;
+    margin-left: 21%;
     display: block;
     margin-bottom: 20px;
+
 }
 
 #input-five {
+    margin: 5%;
+    margin-left: 21%;
     display: block;
     margin-bottom: 20px;
+
 }
+
 
 #titleHeaderTextUserInp {
     padding-top: 30px;
@@ -376,15 +411,25 @@
 }
 
 #input-list {
-    padding-left: 46%;
+    margin-top: 4%;
+    max-width: 14%;
+    padding-top: 2%;
+    margin-left: 43%;
+    border: solid thin rgb(255, 255, 255);
+    padding-bottom: 2%;
+    border-radius: 2%;
+    background-color: rgba(0, 0, 0, .5);
 }
 
-#submitBTN {
+#userInpSubmitBtn {
     text-align: center;
+    margin-left: 37%;
+    margin-top: 10%;
 }
 
 .input::placeholder {
     color: black;
+    text-align: center;
 }
 
 #userInpNavBTN:hover,
