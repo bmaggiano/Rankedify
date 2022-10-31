@@ -22,4 +22,4 @@ const loginFormHandler = async (event) => {
 
 const submitBtn = document.getElementById('logInBTN');
 
-    submitBtn.addEventListener('click', loginFormHandler);
+submitBtn.addEventListener('click', loginFormHandler);
