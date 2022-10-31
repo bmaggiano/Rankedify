@@ -50,6 +50,9 @@ userInputFive.addEventListener("invalid", () => {
 });
 
 
+const userSumbit = document.getElementById("submitBtn") 
+  userSumbit.addEventListener('click', )
+
 // const userList = document.getElementById('userInput').value.trim();
     
 // if (userInput.value) {

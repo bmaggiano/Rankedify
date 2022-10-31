@@ -12,9 +12,13 @@
             <h2></h2>
         </div>
         <ul>
-            {{#each list.games.[].game_name}}
+            {{#each list.games.[i].game_name}}
             <li>{{this}}</li>
             {{/each}}
+            {{list.games.[1].game_name}}
+            {{list.games.[2].game_name}}
+            {{list.games.[3].game_name}}
+            {{list.games.[4].game_name}}
         </ul>
 
     </section>

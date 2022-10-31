@@ -1,4 +1,3 @@
-
 var games = [
     {label: 'Grand Theft Auto V', value: 1},
     {label: 'The Witcher 3: Wild Hunt', value: 2},
@@ -409,8 +408,10 @@ var inputThree = document.getElementById("input-three");
 var inputFour = document.getElementById("input-four");
 var inputFive = document.getElementById("input-five");
 
-let listArr = []
+// const autocompleteArr = function autocompleteArr() {
 
+    let listArr = []
+    
 autocomplete({
     input: inputOne,
     fetch: function (text, update) {
@@ -419,8 +420,8 @@ autocomplete({
         var suggestions = games.filter(n => n.label.toLowerCase().startsWith(text))
         update(suggestions);
     },
-    onSelect: function (item) {
-        input.value = item.label;
+    onSelect: function(item) {
+        inputOne.value = item.label;
         const resultOne = item.value;
         listArr.push(resultOne)
     }
@@ -435,10 +436,10 @@ autocomplete({
         update(suggestions);
     },
     onSelect: function (item) {
-        input.value = item.label;
+        inputTwo.value = item.label;
         const resultTwo = item.value;
         listArr.push(resultTwo)
-
+        
     }
 });
 
@@ -451,10 +452,10 @@ autocomplete({
         update(suggestions);
     },
     onSelect: function (item) {
-        input.value = item.label;
+        inputThree.value = item.label;
         const resultThree = item.value;
         listArr.push(resultThree)
-
+        
     }
 });
 
@@ -467,10 +468,10 @@ autocomplete({
         update(suggestions);
     },
     onSelect: function (item) {
-        input.value = item.label;
+        inputFour.value = item.label;
         const resultFour = item.value;
         listArr.push(resultFour)
-
+        
     }
 });
 
@@ -483,9 +484,14 @@ autocomplete({
         update(suggestions);
     },
     onSelect: function (item) {
-        input.value = item.label;
+        inputFive.value = item.label;
         const resultFive = item.value;
         listArr.push(resultFive)
         console.log(listArr)
     }
 });
+// }
+
+// autocompleteArr();
+
+// module.exports = autocompleteArr
