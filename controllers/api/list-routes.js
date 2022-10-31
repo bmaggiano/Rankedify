@@ -1,5 +1,4 @@
 const  UserInput  = require('../../models/userInput');
-// const autocompleteArr = require('../../js/autocomplete')
 const router = require('express').Router();
 
 
