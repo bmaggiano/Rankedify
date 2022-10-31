@@ -193,25 +193,6 @@
     background-color: rgba(0, 0, 0, .5);
 }
 
-input::-webkit-input-placeholder {
-    color: rgb(255, 255, 255) !important;
-}
-
-input:-moz-placeholder {
-    /* Firefox 18- */
-    color: rgb(255, 255, 255) !important;
-}
-
-input::-moz-placeholder {
-    /* Firefox 19+ */
-    color: rgb(255, 255, 255) !important;
-}
-
-input:-ms-input-placeholder {
-    color: rgb(255, 255, 255) !important;
-}
-
-
 #password-login {
     text-align: center;
     margin-left: 40%;
@@ -257,11 +238,6 @@ input:-ms-input-placeholder {
     padding-right: 50px;
 }
 
-#email-signup {
-    margin-left: 40%;
-    width: 19%;
-    background-color: rgba(0, 0, 0, .5);
-}
 
 #email-signup-text {
     background-color: rgba(0, 0, 0, .8);
@@ -269,16 +245,25 @@ input:-ms-input-placeholder {
     padding: 10px;
 }
 
+#email-signup {
+    margin-left: 40%;
+    width: 19%;
+    background-color: rgba(0, 0, 0, .8);
+    color: #ffffff;
+}
+
 #username-signup {
     margin-left: 40%;
     width: 19%;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .8);
+    color: #ffffff;
 }
 
 #password-signup {
     margin-left: 40%;
     width: 19%;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .8);
+    color: #ffffff;
 }
 
 #signupText {
@@ -321,11 +306,45 @@ input:-ms-input-placeholder {
 
 /*-------------------------- User Input Page---------------------------------- */
 #userInpBody {
-    background-image: url(../assets/images/artwork-the-witcher-3-wild-hunt-hd.jpg);
+    background-image: url(../assets/images/3026429.jpg);
     height: 1297px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+
+
+#input-one {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#game-1 {
+    text-align: center;
+    font-size: 26px;
+    color: white;
+    padding-left: 48px;
+}
+
+#input-two {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#input-three {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#input-four {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#input-five {
+    display: block;
+    margin-bottom: 20px;
 }
 
 #titleHeaderTextUserInp {
@@ -354,6 +373,18 @@ input:-ms-input-placeholder {
     text-align: center;
     color: white;
     font-size: 45px;
+}
+
+#input-list {
+    padding-left: 46%;
+}
+
+#submitBTN {
+    text-align: center;
+}
+
+.input::placeholder {
+    color: black;
 }
 
 #userInpNavBTN:hover,
@@ -393,57 +424,3 @@ input:-ms-input-placeholder {
     justify-content: center;
     padding-left: 10px;
 }
-
-/* #btn64-submit {
-    margin-top: 10;
-}
-
-.button-64 {
-    margin-left: 40%;
-    align-items: center;
-    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
-    border: 0;
-    border-radius: 8px;
-    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    display: flex;
-    font-family: Phantomsans, sans-serif;
-    font-size: 20px;
-    justify-content: center;
-    line-height: 1em;
-    max-width: 100%;
-    min-width: 140px;
-    padding: 3px;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    cursor: pointer;
-}
-
-.button-64:active,
-.button-64:hover {
-    outline: 0;
-}
-
-.button-64 span {
-    background-color: rgb(5, 6, 45);
-    padding: 16px 24px;
-    border-radius: 6px;
-    width: 100%;
-    height: 100%;
-    transition: 300ms;
-}
-
-.button-64:hover span {
-    background: none;
-}
-
-@media (min-width: 768px) {
-    .button-64 {
-        font-size: 24px;
-        min-width: 196px;
-    }
-} */
