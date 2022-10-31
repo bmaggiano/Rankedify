@@ -476,8 +476,12 @@
 
 /*------------------------------------ User Profile ----------------------------------------*/
 
+.listBody {
+    background-color: black;
+}
+
 #titleHeaderTextLogin {
-    color: #ffffff;
+    color: #000000;
 }
 
 .container {
