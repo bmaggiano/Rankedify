@@ -129,6 +129,16 @@ router.get('/aboutus', async (req, res) => {
     }
 });
 
+router.get('/toppicks', async (req, res) => {
+    try {
+        res.render('masterList', {
+            loggedIn: req.session.loggedIn
+        })
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 
 
 
