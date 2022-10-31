@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Usergames, Games, User } = require('../models/');
+const UserInput = require('../models/userInput');
 const seedGames = require('../seed/gameSeeds');
 // const withAuth = require('../utils/auth');
 const withAuth = require('../utils/auth')
@@ -25,10 +26,15 @@ router.get('/login', async (req, res) => {
 
 
 //incomplete, need to change this res.render to actual handlebars
-router.get('/list', withAuth, async (req, res) => {
+// need to figure out how to get all user_inputs
+// ASK RACHEL
+router.get('/list', async (req, res) => {
     try {
         const listData = await User.findAll({
-            include: [{ model: Games, through: Usergames }]
+            include: [
+                {
+                    model: UserInput,
+                }],
         });
 
         if (!listData) {
@@ -37,8 +43,11 @@ router.get('/list', withAuth, async (req, res) => {
         }
         const list = await listData.map((listItem) => listItem.get({ plain: true }))
 
+        // const list = listData.get({ plain: true });
+
+        console.log(list)
         // res.status(200).json(listData)
-        res.render('userProfile', {
+        res.render('allList', {
             list,
             loggedIn: req.session.loggedIn
         })
@@ -55,9 +64,9 @@ router.get('/list/:id', withAuth, async (req, res) => {
         const listData = await User.findByPk(req.session.user_id, {
             include: [
                 {
-                    model: Games,
-                    through: Usergames,
-                    attributes: ["game_name"]
+                    model: UserInput,
+                    attributes: ["game_input_one",
+                "game_input_two", "game_input_three", "game_input_four", "game_input_five"]
                 }],
         });
         if (!listData) {
@@ -66,6 +75,8 @@ router.get('/list/:id', withAuth, async (req, res) => {
         }
 
         const list = listData.get({ plain: true });
+        // const list = await listData.map((listItem) => listItem.get({ plain: true }))
+        console.log(list.user_inputs[0])
         const username = listData.get({ plain: true });
 
 
