@@ -532,10 +532,13 @@
 .mainListContainer {
     background-image: url(/assets/images/centeredsquare1.webp);
     background-position: center;
+    height: 100%;
 }
 
 .listContainer {
     background-image: url(/assets/images/masterlistbg.jpg);
+    border-radius: 2%;
+    background-position: center;
 }
 
 .listItems li{
