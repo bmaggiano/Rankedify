@@ -42,10 +42,13 @@ router.get('/list', async (req, res) => {
             return;
         }
         const list = await listData.map((listItem) => listItem.get({ plain: true }))
+        // const username = await listData.map((listItem) => listItem.get({ raw: true }))
+        // const username = listData.get({ plain: true });
 
         // const list = listData.get({ plain: true });
 
-        console.log(list)
+        // console.log(list[0].user_inputs[0].dataValues)
+        console.log(list[0].user_input.game_input_one)
         // res.status(200).json(listData)
         res.render('allList', {
             list,
@@ -76,13 +79,11 @@ router.get('/list/:id', withAuth, async (req, res) => {
 
         const list = listData.get({ plain: true });
         // const list = await listData.map((listItem) => listItem.get({ plain: true }))
-        console.log(list.user_inputs[0])
-        const username = listData.get({ plain: true });
+        console.log(list)
 
 
         res.render('userProfile', {
             list,
-            username,
             loggedIn: req.session.loggedIn,
         })
 
