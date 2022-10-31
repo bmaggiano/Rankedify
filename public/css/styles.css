@@ -8,35 +8,12 @@
 /* -----------------------------homepage-------------------------------------- */
 #homepageBody {
     background-image: url(../assets/images/alexey-savchenko-k4Akpt5-Sfk-unsplash.jpg);
-    height: 1297px;
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#loginBody {
-    background-image: url(../assets/images/Sekiro3.png);
-    height: 1297px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#signupBody {
-    background-image: url(../assets/images/Elden\ Ring.png);
-    height: 1297px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#profileBody {
-    background-image: url(../assets/images/Stardew\ Valley.png);
-    height: 1297px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 #titleHeader {
     justify-content: center;
@@ -125,7 +102,7 @@
 /*------------------------------Login Page------------------------------------ */
 #loginBody {
     background-image: url(../assets/images/R.jpg);
-    height: 1297px;
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -252,7 +229,7 @@
 /*-----------------------------Signup Page------------------------------------ */
 #signupBody {
     background-image: url(../assets/images/Elden\ Ring.png);
-    height: 1297px;
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -361,10 +338,8 @@
 
 /*-------------------------- User Input Page---------------------------------- */
 #userInpBody {
-
     background-image: url(../assets/images/3026429.jpg);
-
-    height: 1297px;
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -536,58 +511,83 @@
 .mainListContainer {
     background-image: url(/assets/images/centeredsquare1.webp);
     background-position: center;
-};
-
-/* #btn64-submit {
-    margin-top: 10;
 }
 
-.button-64 {
-    margin-left: 40%;
-    align-items: center;
-    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
-    border: 0;
-    border-radius: 8px;
-    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    display: flex;
-    font-family: Phantomsans, sans-serif;
-    font-size: 20px;
-    justify-content: center;
-    line-height: 1em;
-    max-width: 100%;
-    min-width: 140px;
-    padding: 3px;
+
+/*--------------------------Users Picks----------------------------------- */
+#allListBody {
+    background-image: url(../assets/images/get_image_large.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#allListNavBTN {
+    margin: 0px 10px;
     text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+
 }
 
-.button-64:active,
-.button-64:hover {
-    outline: 0;
+#titleHeaderTextAllList {
+    padding-top: 30px;
+    color: white;
+    font-size: 56px;
+    justify-content: center;
+    padding-bottom: 90px;
 }
 
-.button-64 span {
-    background-color: rgb(5, 6, 45);
-    padding: 16px 24px;
-    border-radius: 6px;
-    width: 100%;
-    height: 100%;
-    transition: 300ms;
+#allListNavBar {
+    justify-content: flex-end;
 }
 
-.button-64:hover span {
-    background: none;
+#allListDescription {
+    text-shadow: 2px 2px rgb(108, 108, 108);
+    padding-top: 5%;
+    text-align: center;
+    color: white;
+    font-size: 45px;
 }
 
-@media (min-width: 768px) {
-    .button-64 {
-        font-size: 24px;
-        min-width: 196px;
-    }
+#allListUlBody {
+    color: white;
+    font-size: 20px;
+    min-width: 10%;
+    background-color: rgba(0, 0, 0, .5);
+    text-align: center;
+    margin-top: 4%;
+    max-width: 14%;
+    margin-left: 43.6%;
+    border: solid thin rgb(255, 255, 255);
+    border-radius: 2%;
+    background-color: rgba(0, 0, 0, .5);
+}
 
+
+#scrollList {
+    overflow-y: scroll;
+    max-height: 60vh;
+    /* scrollbar-width: thin; */
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+/*--------------------------Users Picks----------------------------------- */
