@@ -3,6 +3,7 @@ const User = require("./User")
 const Games = require("./Games")
 const Usergames = require("./Usergames")
 const UserInput = require("./userInput")
+// const Comments = require("./comments")
 
 
 // Categories have many Products
