@@ -24,10 +24,6 @@ router.get('/login', async (req, res) => {
     }
 });
 
-
-//incomplete, need to change this res.render to actual handlebars
-// need to figure out how to get all user_inputs
-// ASK RACHEL
 router.get('/list', async (req, res) => {
     try {
         const listData = await User.findAll({
@@ -43,15 +39,12 @@ router.get('/list', async (req, res) => {
         }
         const list = await listData.map((listItem) => listItem.get({ plain: true }))
 
-        // const list = listData.get({ plain: true });
-
-        console.log(list)
+        console.log(list[0].user_input.game_input_one)
         // res.status(200).json(listData)
         res.render('allList', {
             list,
             loggedIn: req.session.loggedIn
         })
-
 
     } catch (err) {
         console.error(err)
@@ -75,14 +68,10 @@ router.get('/list/:id', withAuth, async (req, res) => {
         }
 
         const list = listData.get({ plain: true });
-        // const list = await listData.map((listItem) => listItem.get({ plain: true }))
-        console.log(list.user_inputs[0])
-        const username = listData.get({ plain: true });
-
+        console.log(list)
 
         res.render('userProfile', {
             list,
-            username,
             loggedIn: req.session.loggedIn,
         })
 

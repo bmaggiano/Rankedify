@@ -24,6 +24,7 @@ const userSumbit = document.getElementById("submitBtn")
       });
       
       if (response.ok) {
+        const { user_id } = await response.json()
         document.location.replace(`/list/${user_id}`);
       } else {
         alert('Failed to sign up.');
