@@ -1,15 +1,20 @@
 <div class="mainContainer">
-<nav class="  text-white  p-50 d-flex p-2" id="homepage-nav">
-        <a type="button" id="navBTN-Homepage" class="btn btn-outline-light raise navBTN-Homepage" href="/">Home</a>
+<nav class="d-flex p-2" id="homepage-nav">
         {{#if loggedIn}}
-        <button type="button" id="navBTN-Homepage" class="btn btn-outline-light raise navBTN-Homepage">Log out</button>
+        <button type="button" id="navBTN-Homepage" class="btn btn-outline-light navBTN-Homepage"><a href="/"
+                id="logoutNavBTN">Log
+                Out</a></button>
         {{else}}
-        <button type="button" id="navBTN-Homepage" class=" btn btn-outline-light raise navBTN-Homepage"><a href="/login"
+        <button type="button" id="navBTN-Homepage" class=" btn btn-outline-light navBTN-Homepage"><a href="/login"
                 id="loginInNavBTN">Log
                 in</a></button>
         {{/if}}
+        <button type="button" id="myList" class="btn btn-outline-light raise navBTN-Homepage"><a href="/list/:id">My
+            list</a></button>
+        <button type="button" id="nav-btn-aboutus" class="btn btn-outline-light raise navBTN-Homepage"><a href="/list">Users Picks</a></button>
+        <button type="button" id="nav-btn-aboutus" class="btn btn-outline-light raise navBTN-Homepage"><a href="/aboutus">About us</a></button>
+        <button type="button" id="nav-btn-aboutus" class="btn btn-outline-light raise navBTN-Homepage"><a href="/toppicks">Top Picks</a></button>
         <a type="button" id="navBTN-Homepage" class="btn btn-outline-light raise navBTN-Homepage" href="/list/:id">My list</a>
-        <a type="button" id="navBTN-Homepage" class="btn btn-outline-light raise navBTN-Homepage" href="/list">Users Picks</a>
     </nav>
 <div class="aboutUs 	 text-white  text-center p-50 ">
     <h1 class="aboutContainer text-[50px] text-center justify-items-center">About Us</h1>
@@ -24,21 +29,21 @@
         </div>
         <div class="aboutPeople">
             <div class="aboutPerson">
-                <img class="p-5 rounded-full h-50 w-50" src="./assets/images/witcherProfilePic.jpg" alt="">
+                <img class="p-5 rounded-full h-50 w-50 mx-auto" src="./assets/images/witcherProfilePic.jpg" alt="">
                 <h3 class="aboutName text-[20px]">Brandon Maggiano</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam in eveniet blanditiis numquam</p>
                 <a href="https://github.com/bmaggiano" target="_blank"
                     class="card-Bran underline underline-offset-8 decoration-2">Github Link</a>
             </div>
             <div class="aboutPerson">
-                <img class="p-5 rounded-full h-50 w-50" src="./assets/images/witcherProfilePic.jpg" alt="">
+                <img class="p-5 rounded-full h-50 w-50 mx-auto" src="./assets/images/witcherProfilePic.jpg" alt="">
                 <h3 class="aboutName text-[20px]">Derrick Lafforthun</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam in eveniet blanditiis numquam</p>
                 <a href="https://github.com/Derricklaff" target="_blank"
                     class="card-And hover:text-base underline underline-offset-8 decoration-2">Github Link</a>
             </div>
             <div class="aboutPerson">
-                <img class="p-5 rounded-full h-50 w-50" src="./assets/images/witcherProfilePic.jpg" alt="">
+                <img class="p-5 rounded-full h-50 w-50 mx-auto" src="./assets/images/witcherProfilePic.jpg" alt="">
                 <h3 class="aboutName text-[20px]">Luis Morales</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam in eveniet blanditiis numquam</p>
                 <a href="https://github.com/FunnyLookingFish" target="_blank"
@@ -46,7 +51,7 @@
             </div>
 
             <div class="aboutPerson">
-                <img class="p-5 rounded-full h-50 w-50 " src="./assets/images/witcherProfilePic.jpg" alt="">
+                <img class="p-5 rounded-full h-50 w-50 mx-auto" src="./assets/images/witcherProfilePic.jpg" alt="">
                 <h3 class="aboutName text-[20px]">Miguel Gallardo</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam in eveniet blanditiis numquam</p>
                 <a href="https://github.com/magallardo77" target="_blank"
