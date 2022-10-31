@@ -534,6 +534,14 @@
     background-position: center;
 }
 
+#masterList {
+    background: black;
+}
+
+.p-1 {
+    color: white;
+}
+
 /* #btn64-submit {
     margin-top: 10;
 }
