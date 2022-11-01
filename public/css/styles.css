@@ -228,7 +228,7 @@
 
 /*-----------------------------Signup Page------------------------------------ */
 #signupBody {
-    background-image: url(../assets/images/Elden\ Ring.png);
+    background-image: url(../assets/images/EldenRing.png);
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -475,9 +475,52 @@
 }
 
 #span {
-    box-shadow: -11px 9px 1px #3cb68f;
-    background-color: black;
+    text-shadow: 2px 2px rgb(108, 108, 108);
+    font-weight: 600;
     border-radius: 16px;
+}
+
+#userProfileNavBTN:hover,
+#userProfileNavBTN:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    color: white;
+}
+
+#userProfileNavBTN {
+    margin: 0px 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+
+}
+
+#userProfileUlBody {
+    color: white;
+    font-size: 20px;
+    min-width: 20%;
+    background-color: rgba(0, 0, 0, .5);
+    text-align: center;
+    margin-top: 4%;
+    max-width: 32%;
+    margin-left: 43.6%;
+    border: solid thin rgb(255, 255, 255);
+    border-radius: 2%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#deleteList {
+    text-shadow: 2px 2px rgb(71, 71, 71);
+    font-weight: 600;
+    border-radius: 16px;
+    color: black;
+}
+
+.UIUsername {
+    text-shadow: 2px 2px rgb(71, 71, 71);
+    font-weight: 400;
+    border-radius: 16px;
+    color: black;
 }
 
 /*------------------------------------ User Profile ----------------------------------------*/
@@ -495,10 +538,15 @@
 
 /*-------------------------- About Us Page---------------------------------- */
 .mainContainer {
-    background-image: url(/assets/images/bluebg.jpg);
+    background-image: url(/assets/images/abUsBG8.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.aboutContainer {
+    text-shadow: 2px 2px rgb(108, 108, 108);
+    font-weight: 600;
 }
 
 .aboutContent {
@@ -510,19 +558,34 @@
     padding-left: 10px;
 }
 
+.aboutName {
+    text-shadow: 2px 2px rgb(108, 108, 108);
+    font-weight: 600;
+    border-radius: 16px;
+}
+
+.card-Mig {
+    text-shadow: 2px 2px rgb(108, 108, 108);
+    font-weight: 600;
+}
+
+.aboutMotiv {
+    text-shadow: 1px 1px rgb(108, 108, 108);
+    font-weight: 600;
+}
+
 /*-------------------------- Master List---------------------------------- */
 
 .mainListContainer {
-    background-image: url(/assets/images//assets/images/centeredsquare1.webp);
+    background-image: url(/assets/images/centeredsquare1.webp);
     background-position: center;
     height: 100%;
 }
-
-.listContainer {
+/* .listContainer {
     background-image: url(/assets/images/masterlistbg.jpg);
     border-radius: 2%;
     background-position: center;
-}
+} */
 
 .listItems li{
     color: white;

@@ -1,65 +1,56 @@
 <div id="profileBody">
-    <nav class=" d-flex p-2" id="userProfileNavBar">
-    <a type="button" id="userProfileNavBTN" class=" btn btn-outline-light" href="/" id="HomeBTN">Home</a>
-    {{#if loggedIn}}
-    <button type="button" id="userProfileNavBTN" class="btn btn-outline-light"><a href="/" id="logoutNavBTN">Log
-        Out</a></button>
-    {{/if}}
-    <a type="button" id="userProfileNavBTN" class="btn btn-outline-light" href="/list/:id">My list</a>
-    <a type="button" id="userProfileNavBTN" class="btn btn-outline-light" href="/aboutus">About us</a>
-    <a type="button" id="userProfileNavBTN" class=" btn btn-outline-light" href="/toppicks">Top
-      Picks</a>
-  </nav>
+    <nav class="userProfileNav justify-end  p-2" id="userProfileNavBar">
+        <a type="button" id="userProfileNavBTN" class=" btn hover:text-black btn-outline-dark" href="/"
+            id="HomeBTN">Home</a>
+        {{#if loggedIn}}
+        <a type="button" id="userProfileNavBTN" class="  btn hover:text-black btn-outline-dark" href="/">Log
+            Out</a>
+        {{/if}}
+        <a type="button" id="userProfileNavBTN" class="  btn hover:text-black btn-outline-dark" href="/list">User Picks</a>
+        <a type="button" id="userProfileNavBTN" class="  btn hover:text-black btn-outline-dark" href="/aboutus">About
+            us</a>
+        <a type="button" id="userProfileNavBTN" class="  btn hover:text-black btn-outline-dark" href="/toppicks">Top
+            Picks</a>
+    </nav>
     <h1 id="titleHeaderTextLogin" class="d-flex">
-        <span id="span">
+        <span class="userProfileTitle text-bold" id="span">
             Rankedify
         </span>
     </h1>
-    <section class="profile">
-        <div class="profile-picture"></div>
+        
+            <div>
+                <div id="">
 
+                    <ul id="allListUlBody">
+                    <div class="UIUsername">
+                        {{#if list.user_input}}
+                        <b>{{list.username}}'s List</b>
+                        {{/if}}
+                    </div>    
+                        <li>1. {{list.user_input.game_input_one}}</li>
+                        <li>2. {{list.user_input.game_input_two}}</li>
+                        <li>3. {{list.user_input.game_input_three}}</li>
+                        <li>4. {{list.user_input.game_input_four}}</li>
+                        <li>5. {{list.user_input.game_input_five}}</li>
 
-        <div class="container">
-            <div class="card" id="item" style="width: 18rem; background: black; color: white">
-                <div class="card-header">
-                    <div class="username-title">
-                        <h2>
-                            {{#if list.user_input}}
-                            <b>{{list.username}}'s List</b>
-                            {{/if}}
-                        </h2>
-                    </div>
+                        {{#if list.user_input}}
+                        <button id="deleteList" class="uPBtn hover:text-black btn-outline-dark">Delete Your
+                            List</button>
+                        {{else}}
+                        <a type="button" id="createList" class="btn btn-outline-dark" href="/userinput">Click here to
+                            create a
+                            list</a>
+                        {{/if}}
+                    </ul>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item" style="background-color: rgb(144, 1, 152); color: white; text-shadow">
-                        1. {{list.user_input.game_input_one}}
-                    </li>
-                    <li class="list-group-item" style="background-color: rgb(152, 92, 1); color: white">
-                        2. {{list.user_input.game_input_two}}
-                    </li>
-                    <li class="list-group-item" style="background-color: rgb(10, 102, 16); color: white">
-                        3. {{list.user_input.game_input_three}}
-                    </li>
-                    <li class="list-group-item" style="background-color: rgb(25, 0, 255); color: white">
-                        4. {{list.user_input.game_input_four}}
-                    </li>
-                    <li class="list-group-item" style="background-color: rgb(35, 186, 240); color: white">
-                        5. {{list.user_input.game_input_five}}
-                    </li>
-                </ul>
-    {{#if list.user_input}}
-    <button id="deleteList" class="btn btn-light btn-outline-dark">Delete Your List</button>
-    {{else}}
-    <a type="button" id="createList" class="btn btn-outline-dark" href="/userinput">Click here to create a list</a>
-    {{/if}}
             </div>
-        </div>
+        
+</div>
 
-    </section>
-    {{#if loggedIn}}
-    <script src="/js/mylist.js"></script>
-    <script src="/js/logout.js"></script>
-    {{/if}}
-    <script src="/js/login.js"></script>
-    <script src="/js/delete.js"></script>
+{{#if loggedIn}}
+<script src="/js/mylist.js"></script>
+<script src="/js/logout.js"></script>
+{{/if}}
+<script src="/js/login.js"></script>
+<script src="/js/delete.js"></script>
 </div>
