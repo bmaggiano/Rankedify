@@ -1,18 +1,15 @@
 <div id="profileBody">
-    <nav class="d-flex p-2" id="homepage-nav">
-        {{#if loggedIn}}
-        <button type="button" id="navBTN-Homepage" <a class="aUserProfile  btn btn-outline-dark hover:text-white-500 navBTN-Homepage" href="/"
-                id="logoutNavBTN">Log
-                Out</a>
-        {{else}}
-        <button type="button" id="navBTN-Homepage" class=" btn btn-outline-dark hover:text-white-500 navBTN-Homepage"><a class="aUserProfile hover:text-white-500" href="/login"
-                id="loginInNavBTN">Log
-                in</a>
-        {{/if}}
-        <button type="button" id="nav-btn-aboutus" class="btn btn-outline-dark hover:text-white-500 raise navBTN-Homepage"><a class="aUserProfile hover:text-white-500" href="/list">Users Picks</a>
-        <button type="button" id="nav-btn-aboutus" class="btn btn-outline-dark hover:text-white-500 raise navBTN-Homepage"><a class="aUserProfile hover:text-white-500" href="/aboutus">About us</a>
-        <button type="button" id="nav-btn-aboutus" class="btn btn-outline-dark hover:text-white-500 raise navBTN-Homepage"><a class="aUserProfile hover:text-white-500" href="/toppicks">Top Picks</a>
-    </nav>
+    <nav class=" d-flex p-2" id="userProfileNavBar">
+    <a type="button" id="userProfileNavBTN" class=" btn btn-outline-light" href="/" id="HomeBTN">Home</a>
+    {{#if loggedIn}}
+    <button type="button" id="userProfileNavBTN" class="btn btn-outline-light"><a href="/" id="logoutNavBTN">Log
+        Out</a></button>
+    {{/if}}
+    <a type="button" id="userProfileNavBTN" class="btn btn-outline-light" href="/list/:id">My list</a>
+    <a type="button" id="userProfileNavBTN" class="btn btn-outline-light" href="/aboutus">About us</a>
+    <a type="button" id="userProfileNavBTN" class=" btn btn-outline-light" href="/toppicks">Top
+      Picks</a>
+  </nav>
     <h1 id="titleHeaderTextLogin" class="d-flex">
         <span id="span">
             Rankedify
