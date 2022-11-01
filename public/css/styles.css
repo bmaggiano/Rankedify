@@ -523,6 +523,25 @@
     color: black;
 }
 
+#userProfileNavBar {
+    justify-content: flex-end;
+}
+
+#userProfileUlBody {
+    color: white;
+    font-size: 27px;
+    min-width: 10%;
+    background-color: rgba(0, 0, 0, .5);
+    text-align: center;
+    margin-top: 4%;
+    max-width: 22%;
+    margin-left: 38.7%;
+    border: solid thin rgb(255, 255, 255);
+    border-radius: 2%;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 3%;
+    margin-right: 38.7%;
+}
 /*------------------------------------ User Profile ----------------------------------------*/
 
 @keyframes fadeInAnimation {

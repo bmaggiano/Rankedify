@@ -1,15 +1,15 @@
 <div id="profileBody">
-    <nav class="userProfileNav justify-end  p-2" id="userProfileNavBar">
-        <a type="button" id="userProfileNavBTN" class=" btn hover:text-black btn-outline-dark" href="/"
+    <nav class="userProfileNav d-flex  p-2" id="userProfileNavBar">
+        <a type="button" id="userProfileNavBTN" class="justify-end btn hover:text-black btn-outline-dark" href="/"
             id="HomeBTN">Home</a>
         {{#if loggedIn}}
-        <a type="button" id="userProfileNavBTN" class="  btn hover:text-black btn-outline-dark" href="/">Log
+        <a type="button" id="userProfileNavBTN" class="justify-end btn hover:text-black btn-outline-dark" href="/">Log
             Out</a>
         {{/if}}
-        <a type="button" id="userProfileNavBTN" class="  btn hover:text-black btn-outline-dark" href="/list">User Picks</a>
-        <a type="button" id="userProfileNavBTN" class="  btn hover:text-black btn-outline-dark" href="/aboutus">About
+        <a type="button" id="userProfileNavBTN" class="justify-end  btn hover:text-black btn-outline-dark" href="/list">User Picks</a>
+        <a type="button" id="userProfileNavBTN" class="justify-end  btn hover:text-black btn-outline-dark" href="/aboutus">About
             us</a>
-        <a type="button" id="userProfileNavBTN" class="  btn hover:text-black btn-outline-dark" href="/toppicks">Top
+        <a type="button" id="userProfileNavBTN" class="justify-end  btn hover:text-black btn-outline-dark" href="/toppicks">Top
             Picks</a>
     </nav>
     <h1 id="titleHeaderTextLogin" class="d-flex">
@@ -19,9 +19,9 @@
     </h1>
         
             <div>
-                <div id="">
+                <div>
 
-                    <ul id="allListUlBody">
+                    <ul class="userProfile " id="userProfileUlBody">
                     <div class="UIUsername">
                         {{#if list.user_input}}
                         <b>{{list.username}}'s List</b>
