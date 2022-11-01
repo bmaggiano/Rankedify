@@ -37,8 +37,7 @@ router.get('/list', async (req, res) => {
         }
         const list = await listData.map((listItem) => listItem.get({ plain: true }))
 
-        console.log(list[0].user_input.game_input_one)
-        // res.status(200).json(listData)
+
         res.render('allList', {
             list,
             loggedIn: req.session.loggedIn
@@ -57,7 +56,7 @@ router.get('/list/:id', withAuth, async (req, res) => {
                 {
                     model: UserInput,
                     attributes: ["game_input_one",
-                "game_input_two", "game_input_three", "game_input_four", "game_input_five"]
+                        "game_input_two", "game_input_three", "game_input_four", "game_input_five"]
                 }],
         });
         if (!listData) {
@@ -85,14 +84,6 @@ router.get('/signup', async (req, res) => {
 
     } catch (err) {
         res.status(500).json(err);
-    }
-});
-
-router.get('/master', async (req, res) => {
-    try {
-
-    } catch {
-
     }
 });
 
